@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+4988d2a08ceed84bc1b8479d340cf262 CMakeFiles/clean_test_results
+f02d64fa68316e17313c43200dd209b9 lab6_starter/ros_numpy/CMakeFiles/_run_tests_ros_numpy_nosetests_test
+a6589cbeb3dd89f89708fa9bb89eb917 lab6_starter/ros_numpy/CMakeFiles/clean_test_results_ros_numpy
+f02d64fa68316e17313c43200dd209b9 lab6_starter/ros_numpy/CMakeFiles/run_tests_ros_numpy_nosetests_test
