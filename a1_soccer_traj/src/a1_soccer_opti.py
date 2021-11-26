@@ -1,4 +1,4 @@
-import casadi as ca
+ import casadi as ca
 from a1_kinematics import A1Kinematics
 import numpy as np
 import matplotlib.pyplot as plt
@@ -285,7 +285,7 @@ class A1KinematicsOpti:
 
 		self.__addTotalTimeCost()
 		self.__addBaseNodeCost(self.init_base_pose, -1) # force the base to move as little as possible
-		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOTE: change the target state constraint to be soccer one
+		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOT E: change the target state constraint to be soccer one
 		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one
 		# NOTE: try traget state as constraint
 		# self.opti.subject_to(self.final_ef_pos == self.desired_ef_pos + final_node_slacking)
