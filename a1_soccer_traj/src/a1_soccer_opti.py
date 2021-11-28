@@ -16,7 +16,7 @@ class A1KinematicsOpti:
 		self.ef = 'FR'
 		# state
 		self.input_num = 6 # velocity on base xdot ydot ... for the base
-		self.base_pose_num = 6 # x y z r p y 
+		self.base_pose_num = 6 # x y z r p y
 		self.FR_state_num = 3 # joint pos 3DoF
 		self.FR_vel_num = 3
 		self.FL_state_num = 3
@@ -27,7 +27,7 @@ class A1KinematicsOpti:
 		self.RL_vel_num = 3
 		self.lambda_num = 3
 		self.total_grid = 50 # knot num of traj opti
-		self.min_time = 4 
+		self.min_time = 4
 
 		# weights of the cost
 		# dx dy dz droll dpitch dyaw
@@ -38,6 +38,9 @@ class A1KinematicsOpti:
 		self.w_ef_final = np.array([500,500,2000,100,100,100])
 		self.w_time = 10
 		self.w_rpy = np.array([5, 5, 5])
+
+		#added weights for midpoint
+		self.w_mid_vel = -1
 
 		# self.ipopt_option = {"verbose": False, "ipopt.print_level": 0, "print_time": 0}
 		#self.ipopt_option = {"max_iter": 100}
@@ -96,7 +99,7 @@ class A1KinematicsOpti:
 		self.total_cost += self.final_ef_cost
 
 	###############
-	def __addEFVelocityCost(self, base_pose, FR_motors, target_velocity, t, w):
+	def __addEFVelocityCost(self, base_pose, FR_motors, target_velocity, t, w, magnitude_bool):
 		fk_position_jacobian, fk_rotation_jacobian, fk_dual_quaternion_jacobian = self.a1_kin.get_FR_jacobian(self.base_poses[:, t], self.FR_states[:, t])
 
 		FR_vels = self.FR_vels
@@ -107,13 +110,16 @@ class A1KinematicsOpti:
 		jacobian_pos = fk_position_jacobian(q)
 		current_velocity = ca.mtimes(jacobian_pos, ca.vertcat(self.base_vels[:, t], FR_vels[:, t]))
 
-		rot_diff = ca.vec([0, 0, 0])
-		vel_diff = ca.vec(current_velocity - target_velocity)**2
+		if not magnitude_bool:
+			rot_diff = ca.vec([0, 0, 0])
+			vel_diff = ca.vec(current_velocity - target_velocity)**2
 
-		self.final_ef_vel_cost = ca.mtimes(w.reshape((1,6)), ca.vertcat(vel_diff, rot_diff))
-		self.total_cost += self.final_ef_vel_cost
+			self.final_ef_vel_cost = ca.mtimes(w.reshape((1,6)), ca.vertcat(vel_diff, rot_diff))
+			self.total_cost += self.final_ef_vel_cost
+		else:
+			curr_vel_mag = np.sqrt(current_velocity[0]**2 + current_velocity[1]**2 + current_velocity[2]**2)
 
-		return 0
+			self.total_cost += w*curr_vel_mag
 	###############
 
 	def __addTotalTimeCost(self):
@@ -127,6 +133,9 @@ class A1KinematicsOpti:
 
 	def set_init_ef_pos(self,init_ef_pos):
 		self.init_ef_pos = init_ef_pos
+
+	def set_mid_ef_pos(self, mid_ef_pos):
+		self.mid_ef_pos = mid_ef_pos
 
 	def set_final_ef_pos(self,final_ef_pos):
 		self.final_ef_pos = final_ef_pos
@@ -210,7 +219,7 @@ class A1KinematicsOpti:
 		self.slack_final = self.opti.variable(6)
 		self.total_cost += ca.mtimes(np.array([10000, 10000, 10000]).reshape((1, 3)), ca.vec(self.slack_final[:3])**2)
 		self.total_cost += ca.mtimes(np.array([10000, 10000, 10000]).reshape((1, 3)), ca.vec(1 - ca.cos(self.slack_final[3:])))
-		self.opti.subject_to(self.base_poses[:, 0] == self.init_base_pose) # initial condition 
+		self.opti.subject_to(self.base_poses[:, 0] == self.init_base_pose) # initial condition
 		self.opti.subject_to(self.get_end_effector_pos(0)[:3] == self.init_ef_pos[:3]) # initial condition for end effecotor of the swing leg
 		print("init_ef_pos", self.init_ef_pos)
 		#self.opti.subject_to(self.get_end_effector_pos(-1) + self.slack_final == self.final_ef_pos)
@@ -267,7 +276,7 @@ class A1KinematicsOpti:
 				x_fixed_k = FR_pos_k[:2]
 			triangle_mat = ca.hcat([x_RR_k,  x_RL_k, x_fixed_k])
 			self.opti.subject_to(
-				ca.vertcat(base_k[0], base_k[1]) == ca.mtimes(triangle_mat, self.lambdas[:, i])) # not falling constraints 
+				ca.vertcat(base_k[0], base_k[1]) == ca.mtimes(triangle_mat, self.lambdas[:, i])) # not falling constraints
 			self.opti.subject_to(self.lambdas[:, i] >= 0)
 			self.opti.subject_to(ca.sum1(self.lambdas[:, i]) == 1)
 
@@ -302,16 +311,24 @@ class A1KinematicsOpti:
 					print('illegal end effector')
 
 		self.__addTotalTimeCost()
+
+		#Final time
 		self.__addBaseNodeCost(self.init_base_pose, -1) # force the base to move as little as possible
 		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOTE: change the target state constraint to be soccer one
-		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one 
-		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel)
-		# NOTE: try traget state as constraint 
+		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one
+		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel, False)
+		# NOTE: try traget state as constraint
+
 		# self.opti.subject_to(self.final_ef_pos == self.desired_ef_pos + final_node_slacking)
-		# self.total_cost += large_weight*final_node_slacking**2 
+
+		# self.total_cost += large_weight*final_node_slacking**2
 		# self.opti.subject_to(self.final_ef_vel == self.desired_ef_vel + final_vel_slacking)
-		# self.total_cost += large_weight*final_vel_slacking**2 		
+		# self.total_cost += large_weight*final_vel_slacking**2
 		# self.opti.subject_to(self.pelvis_states[:,-1]==self.final_pelvis_pose)
+
+		#Middle time
+
+		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], None, 24, self.w_mid_vel, True)
 
 		self.opti.minimize(self.total_cost)
 
@@ -390,19 +407,24 @@ if __name__ == "__main__":
 	init_base_pose = np.array([0,0,0.3,0,0,0])
 	a1_kin_opti.set_init_base_pose(init_base_pose)
 	a1_kin_opti.set_end_effector('FR')
-	
+
 	init_ef_pos = np.array([0.183, -0.13205, 0, 0, 0, 0])
 	a1_kin_opti.set_init_ef_pos(init_ef_pos)
-	
+
+	# Middle location
+	mid_ef_pos = np.array([])
+	a1_kin_opti.set_mid_ef_pos(mid_ef_pos)
+
+	# Final location
 	final_ef_pos = np.array([0.1, -0.16, 0.2, 0, -0.75*np.pi, 0]) #small lift
 	a1_kin_opti.set_final_ef_pos(final_ef_pos)
-	final_ef_vel = np.array([0, 0, 0]) 
+	final_ef_vel = np.array([0, 0, 0])
 	a1_kin_opti.set_final_ef_vel(final_ef_vel)
 
 	a1_kin_opti.set_FL_pos(np.array([0.183, 0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RR_pos(np.array([-0.183, -0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RL_pos(np.array([-0.183, 0.13205, 0, 0, 0, 0]))
-	
+
 	# try:
 	base_sol, FR_joint_sol, FL_joint_sol, RR_joint_sol, RL_joint_sol = a1_kin_opti.solve()
 	motor_last = np.concatenate([FR_joint_sol[:,-1], FL_joint_sol[:,-1], RR_joint_sol[:,-1], RL_joint_sol[:,-1]])
@@ -453,4 +475,3 @@ if __name__ == "__main__":
 	# 	results['time_span'] = a1_kin_opti.opti.debug.value(a1_kin_opti.time_span)
 	# 	results['total_grid'] = a1_kin_opti.total_grid
 	# 	plot_traj_post_solve(a1_kin_opti)
-
