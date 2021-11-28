@@ -1,8 +1,8 @@
-# Install script for directory: /home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/src
+# Install script for directory: /mnt/c/final_project/106a-project/a1_soccer_vision/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/final_project/106a-project/a1_soccer_vision/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,7 +32,12 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   
       if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
         file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
@@ -42,92 +47,92 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
       endif()
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/_setup_util.py")
+   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install" TYPE PROGRAM FILES "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE PROGRAM FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/env.sh")
+   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install" TYPE PROGRAM FILES "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE PROGRAM FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/env.sh")
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/setup.bash;/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/local_setup.bash")
+   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/setup.bash;/mnt/c/final_project/106a-project/a1_soccer_vision/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install" TYPE FILE FILES
-    "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/setup.bash"
-    "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES
+    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.bash"
+    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/setup.sh;/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/local_setup.sh")
+   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/setup.sh;/mnt/c/final_project/106a-project/a1_soccer_vision/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install" TYPE FILE FILES
-    "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/setup.sh"
-    "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES
+    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.sh"
+    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/setup.zsh;/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/local_setup.zsh")
+   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/setup.zsh;/mnt/c/final_project/106a-project/a1_soccer_vision/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install" TYPE FILE FILES
-    "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/setup.zsh"
-    "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES
+    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.zsh"
+    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
-if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install/.rosinstall")
+   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install" TYPE FILE FILES "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/gtest/cmake_install.cmake")
-  include("/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/lab6_starter/ros_numpy/cmake_install.cmake")
-  include("/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/lab6_starter/segmentation/cmake_install.cmake")
+  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/gtest/cmake_install.cmake")
+  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/ros_numpy/cmake_install.cmake")
+  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/cmake_install.cmake")
 
 endif()
 
@@ -139,5 +144,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/final_project/106a-project/a1_soccer_vision/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

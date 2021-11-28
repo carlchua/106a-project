@@ -1,8 +1,8 @@
-# Install script for directory: /usr/src/gmock
+# Install script for directory: /usr/src/googletest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/final_project/106a-project/a1_soccer_vision/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -32,9 +32,14 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
+# Is this installation the result of a crosscompile?
+if(NOT DEFINED CMAKE_CROSSCOMPILING)
+  set(CMAKE_CROSSCOMPILING "FALSE")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build/gtest/gtest/cmake_install.cmake")
+  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/gtest/googlemock/cmake_install.cmake")
 
 endif()
 

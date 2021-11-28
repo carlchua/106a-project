@@ -1,2 +1,2 @@
-lab6_starter/ros_numpy:lab6_starter/segmentation
--DCATKIN_DEVEL_PREFIX=/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/devel -DCMAKE_INSTALL_PREFIX=/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/install -G Unix Makefiles
+ros_numpy:segmentation
+-DCATKIN_DEVEL_PREFIX=/mnt/c/final_project/106a-project/a1_soccer_vision/devel -DCMAKE_INSTALL_PREFIX=/mnt/c/final_project/106a-project/a1_soccer_vision/install -G Unix Makefiles

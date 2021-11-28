@@ -1,9 +1,9 @@
 # CMake generated Testfile for 
-# Source directory: /home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/src
-# Build directory: /home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/build
+# Source directory: /mnt/c/final_project/106a-project/a1_soccer_vision/src
+# Build directory: /mnt/c/final_project/106a-project/a1_soccer_vision/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
-subdirs(gtest)
-subdirs(lab6_starter/ros_numpy)
-subdirs(lab6_starter/segmentation)
+subdirs("gtest")
+subdirs("ros_numpy")
+subdirs("segmentation")

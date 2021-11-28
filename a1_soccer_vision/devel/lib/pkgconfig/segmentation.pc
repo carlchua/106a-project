@@ -1,4 +1,4 @@
-prefix=/home/cc/ee106a/fl21/class/ee106a-afs/ros_workspaces/lab6/devel
+prefix=/mnt/c/final_project/106a-project/a1_soccer_vision/devel
 
 Name: segmentation
 Description: Description of segmentation
