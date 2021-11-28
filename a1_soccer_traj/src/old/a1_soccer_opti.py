@@ -6,8 +6,6 @@ from mpl_toolkits.mplot3d import Axes3D
 import pickle
 import json
 
-# for Jacobian
-
 class A1KinematicsOpti:
 	def __init__(self):
 		self.opti = ca.Opti()
@@ -16,7 +14,7 @@ class A1KinematicsOpti:
 		self.ef = 'FR'
 		# state
 		self.input_num = 6 # velocity on base xdot ydot ... for the base
-		self.base_pose_num = 6 # x y z r p y 
+		self.base_pose_num = 6 # x y z r p y
 		self.FR_state_num = 3 # joint pos 3DoF
 		self.FR_vel_num = 3
 		self.FL_state_num = 3
@@ -27,7 +25,7 @@ class A1KinematicsOpti:
 		self.RL_vel_num = 3
 		self.lambda_num = 3
 		self.total_grid = 50 # knot num of traj opti
-		self.min_time = 4 
+		self.min_time = 4
 
 		# weights of the cost
 		# dx dy dz droll dpitch dyaw
@@ -66,8 +64,6 @@ class A1KinematicsOpti:
 		self.opti.subject_to(self.time_span >= self.min_time)
 		#self.opti.subject_to(self.time_span <= 12)
 
-		self.base_vels = self.opti.variable(self.base_pose_num, self.total_grid)
-
 	def __addNodeVelCost(self, dx):
 		self.node_vel_cost = ca.mtimes(self.w_vel.reshape((1, 6)), dx ** 2)
 		self.total_cost += self.node_vel_cost
@@ -95,27 +91,6 @@ class A1KinematicsOpti:
 		self.final_ef_cost = ca.mtimes(w.reshape((1,6)), ca.vertcat(pos_diff, rot_diff))
 		self.total_cost += self.final_ef_cost
 
-	###############
-	def __addEFVelocityCost(self, base_pose, FR_motors, target_velocity, t, w):
-		fk_position_jacobian, fk_rotation_jacobian, fk_dual_quaternion_jacobian = self.a1_kin.get_FR_jacobian(self.base_poses[:, t], self.FR_states[:, t])
-
-		FR_vels = self.FR_vels
-		FR_states = self.FR_states
-		q = ca.vertcat(base_pose, FR_motors)
-
-		# Find velocity using Jacobian
-		jacobian_pos = fk_position_jacobian(q)
-		current_velocity = ca.mtimes(jacobian_pos, ca.vertcat(self.base_vels[:, t], FR_vels[:, t]))
-
-		rot_diff = ca.vec([0, 0, 0])
-		vel_diff = ca.vec(current_velocity - target_velocity)**2
-
-		self.final_ef_vel_cost = ca.mtimes(w.reshape((1,6)), ca.vertcat(vel_diff, rot_diff))
-		self.total_cost += self.final_ef_vel_cost
-
-		return 0
-	###############
-
 	def __addTotalTimeCost(self):
 		self.total_cost += self.w_time * self.time_span
 
@@ -130,9 +105,6 @@ class A1KinematicsOpti:
 
 	def set_final_ef_pos(self,final_ef_pos):
 		self.final_ef_pos = final_ef_pos
-
-	def set_final_ef_vel(self,final_ef_vel):
-		self.final_ef_vel = final_ef_vel
 
 	def set_FR_pos(self,FR_pos):
 		self.des_FR_pos = FR_pos
@@ -210,7 +182,7 @@ class A1KinematicsOpti:
 		self.slack_final = self.opti.variable(6)
 		self.total_cost += ca.mtimes(np.array([10000, 10000, 10000]).reshape((1, 3)), ca.vec(self.slack_final[:3])**2)
 		self.total_cost += ca.mtimes(np.array([10000, 10000, 10000]).reshape((1, 3)), ca.vec(1 - ca.cos(self.slack_final[3:])))
-		self.opti.subject_to(self.base_poses[:, 0] == self.init_base_pose) # initial condition 
+		self.opti.subject_to(self.base_poses[:, 0] == self.init_base_pose) # initial condition / Initial position & orientation for the body
 		self.opti.subject_to(self.get_end_effector_pos(0)[:3] == self.init_ef_pos[:3]) # initial condition for end effecotor of the swing leg
 		print("init_ef_pos", self.init_ef_pos)
 		#self.opti.subject_to(self.get_end_effector_pos(-1) + self.slack_final == self.final_ef_pos)
@@ -238,19 +210,23 @@ class A1KinematicsOpti:
 			self.opti.subject_to(RR_k >= self.a1_kin.joint_lowers)
 			self.opti.subject_to(RL_k >= self.a1_kin.joint_lowers)
 			# foot pos constrain
+			# RETURNS [X, Y, Z, Rotation on Z, Rotation on Y, Rotation on X]:
 			FR_pos_k = self.get_foot_pos('FR', i)
 			FL_pos_k = self.get_foot_pos('FL', i)
 			RR_pos_k = self.get_foot_pos('RR', i)
 			RL_pos_k = self.get_foot_pos('RL', i)
 			# fix 3 feet position
+			# FIX THE POSITION OF THE THREE STANDING LEGS
 			self.opti.subject_to(RR_pos_k[:3] == self.des_RR_pos[:3])
 			#self.__addNodeRPYCost(RR_pos_k, self.des_RR_pos)
 			self.opti.subject_to(RL_pos_k[:3] == self.des_RL_pos[:3])
 			#self.__addNodeRPYCost(RL_pos_k, self.des_RL_pos)
 			if self.ef == 'FR':
+				# If front right leg is used to kick (end effector):
 				self.opti.subject_to(FL_pos_k[:3] == self.des_FL_pos[:3])
 				#self.__addNodeRPYCost(FL_pos_k, self.des_FL_pos)
 			else:
+				# If front left leg is used to kick (end effector):
 				self.opti.subject_to(FR_pos_k[:3] == self.des_FR_pos[:3])
 				#self.__addNodeRPYCost(FR_pos_k, self.des_FR_pos)
 			# end effector cannot be underground
@@ -265,11 +241,15 @@ class A1KinematicsOpti:
 				x_fixed_k = FL_pos_k[:2]
 			else:
 				x_fixed_k = FR_pos_k[:2]
+			# Form triangle to keep the base position within
 			triangle_mat = ca.hcat([x_RR_k,  x_RL_k, x_fixed_k])
+			# Prevent falling:
 			self.opti.subject_to(
-				ca.vertcat(base_k[0], base_k[1]) == ca.mtimes(triangle_mat, self.lambdas[:, i])) # not falling constraints 
+				ca.vertcat(base_k[0], base_k[1]) == ca.mtimes(triangle_mat, self.lambdas[:, i])) # not falling constraints
 			self.opti.subject_to(self.lambdas[:, i] >= 0)
+			# X,Y of the base position must be a convex combination of the X,Y's of the triangle corners to be within the triangle.
 			self.opti.subject_to(ca.sum1(self.lambdas[:, i]) == 1)
+
 
 			#self.__addEFNodeCost(self.final_ef_pos, i, self.w_ef)
 			# add input & smoothin the traj
@@ -287,6 +267,7 @@ class A1KinematicsOpti:
 					self.opti.subject_to(FR_vel_k <= self.a1_kin.joint_vel_uppers)
 					self.opti.subject_to(FR_vel_k >= self.a1_kin.joint_vel_lowers)
 					FR_knext = self.FR_states[:, i+1]
+					# FR_p == next state of the leg. Add the previous position to the averaged out additional distance from the velocities (FR_vel_k and last_FR_vel) multiplied by time (Dist = vel * t) divided by 2 (average)
 					FR_p = FR_k + (FR_vel_k + last_FR_vel) * deltaT / 2.0
 					self.opti.subject_to(FR_knext == FR_p)
 					last_FR_vel = FR_vel_k
@@ -301,16 +282,16 @@ class A1KinematicsOpti:
 				else:
 					print('illegal end effector')
 
+
 		self.__addTotalTimeCost()
 		self.__addBaseNodeCost(self.init_base_pose, -1) # force the base to move as little as possible
-		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOTE: change the target state constraint to be soccer one
-		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one 
-		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel)
-		# NOTE: try traget state as constraint 
+		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOT E: change the target state constraint to be soccer one
+		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one
+		# NOTE: try traget state as constraint
 		# self.opti.subject_to(self.final_ef_pos == self.desired_ef_pos + final_node_slacking)
-		# self.total_cost += large_weight*final_node_slacking**2 
+		# self.total_cost += large_weight*final_node_slacking**2
 		# self.opti.subject_to(self.final_ef_vel == self.desired_ef_vel + final_vel_slacking)
-		# self.total_cost += large_weight*final_vel_slacking**2 		
+		# self.total_cost += large_weight*final_vel_slacking**2
 		# self.opti.subject_to(self.pelvis_states[:,-1]==self.final_pelvis_pose)
 
 		self.opti.minimize(self.total_cost)
@@ -324,6 +305,7 @@ class A1KinematicsOpti:
 		input_sol = sol.value(self.inputs)
 		#time_sol = sol.value(self.time_span)
 		return base_sol, FR_joint_sol, FL_joint_sol, RR_joint_sol, RL_joint_sol
+
 
 def compute_actual_t(a1_kin_opti, foot, t):
 	basepose = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses)[:, t]
@@ -390,67 +372,63 @@ if __name__ == "__main__":
 	init_base_pose = np.array([0,0,0.3,0,0,0])
 	a1_kin_opti.set_init_base_pose(init_base_pose)
 	a1_kin_opti.set_end_effector('FR')
-	
+
 	init_ef_pos = np.array([0.183, -0.13205, 0, 0, 0, 0])
 	a1_kin_opti.set_init_ef_pos(init_ef_pos)
-	
+
 	final_ef_pos = np.array([0.1, -0.16, 0.2, 0, -0.75*np.pi, 0]) #small lift
 	a1_kin_opti.set_final_ef_pos(final_ef_pos)
-	final_ef_vel = np.array([0, 0, 0]) 
-	a1_kin_opti.set_final_ef_vel(final_ef_vel)
 
 	a1_kin_opti.set_FL_pos(np.array([0.183, 0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RR_pos(np.array([-0.183, -0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RL_pos(np.array([-0.183, 0.13205, 0, 0, 0, 0]))
-	
-	# try:
-	base_sol, FR_joint_sol, FL_joint_sol, RR_joint_sol, RL_joint_sol = a1_kin_opti.solve()
-	motor_last = np.concatenate([FR_joint_sol[:,-1], FL_joint_sol[:,-1], RR_joint_sol[:,-1], RL_joint_sol[:,-1]])
-	base_last = base_sol[:,-1]
-	print('FR0:', compute_actual_t(a1_kin_opti, 'FR', 0))
-	print('FR:', compute_actual_t(a1_kin_opti, 'FR', -1))
-	print('FL:', compute_actual_t(a1_kin_opti, 'FL', -1))
-	print('RR:', compute_actual_t(a1_kin_opti, 'RR', -1))
-	print('RL:', compute_actual_t(a1_kin_opti, 'RL', -1))
-	print(a1_kin_opti.opti.debug.value(a1_kin_opti.time_span))
-	plot_traj_post_solve(a1_kin_opti)
-	results = {}
-	resultsjson = {}
-	results['base_poses'] = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses)
-	results['FR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FR_states)
-	results['FL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FL_states)
-	results['RR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RR_states)
-	results['RL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RL_states)
+	try:
+		base_sol, FR_joint_sol, FL_joint_sol, RR_joint_sol, RL_joint_sol = a1_kin_opti.solve()
+		motor_last = np.concatenate([FR_joint_sol[:,-1], FL_joint_sol[:,-1], RR_joint_sol[:,-1], RL_joint_sol[:,-1]])
+		base_last = base_sol[:,-1]
+		print('FR0:', compute_actual_t(a1_kin_opti, 'FR', 0))
+		print('FR:', compute_actual_t(a1_kin_opti, 'FR', -1))
+		print('FL:', compute_actual_t(a1_kin_opti, 'FL', -1))
+		print('RR:', compute_actual_t(a1_kin_opti, 'RR', -1))
+		print('RL:', compute_actual_t(a1_kin_opti, 'RL', -1))
+		print(a1_kin_opti.opti.debug.value(a1_kin_opti.time_span))
+		plot_traj_post_solve(a1_kin_opti)
+		results = {}
+		resultsjson = {}
+		results['base_poses'] = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses)
+		results['FR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FR_states)
+		results['FL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FL_states)
+		results['RR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RR_states)
+		results['RL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RL_states)
 
-	resultsjson['base_poses'] = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses).tolist()
-	resultsjson['FR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FR_states).tolist()
-	resultsjson['FL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FL_states).tolist()
-	resultsjson['RR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RR_states).tolist()
-	resultsjson['RL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RL_states).tolist()
+		resultsjson['base_poses'] = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses).tolist()
+		resultsjson['FR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FR_states).tolist()
+		resultsjson['FL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FL_states).tolist()
+		resultsjson['RR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RR_states).tolist()
+		resultsjson['RL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RL_states).tolist()
 
-	results['time_span'] = a1_kin_opti.opti.debug.value(a1_kin_opti.time_span)
-	results['total_grid'] = a1_kin_opti.total_grid
-	f = open('test_interp.p', 'w')
-	pickle.dump(results, f)
-	f.close()
-	with open('results.json', 'w') as fp:
-		json.dump(resultsjson, fp)
-	get_motor_i(results, 0)
-	# except RuntimeError:
-	# 	print('FR0:', compute_actual_t(a1_kin_opti, 'FR', 0))
-	# 	print('FR:', compute_actual_t(a1_kin_opti, 'FR', -1))
-	# 	print('FL:', compute_actual_t(a1_kin_opti, 'FL', -1))
-	# 	print('RR:', compute_actual_t(a1_kin_opti, 'RR', -1))
-	# 	print('RL:', compute_actual_t(a1_kin_opti, 'RL', -1))
-	# 	print(a1_kin_opti.opti.debug.value(a1_kin_opti.time_span))
-	# 	results = {}
-	# 	results['base_poses'] = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses)
-	# 	results['FR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FR_states)
-	# 	results['FL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FL_states)
-	# 	results['RR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RR_states)
-	# 	results['RL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RL_states)
+		results['time_span'] = a1_kin_opti.opti.debug.value(a1_kin_opti.time_span)
+		results['total_grid'] = a1_kin_opti.total_grid
+		f = open('test_interp.p', 'w')
+		pickle.dump(results, f)
+		f.close()
+		with open('results.json', 'w') as fp:
+			json.dump(resultsjson, fp)
+		get_motor_i(results, 0)
+	except RuntimeError:
+		print('FR0:', compute_actual_t(a1_kin_opti, 'FR', 0))
+		print('FR:', compute_actual_t(a1_kin_opti, 'FR', -1))
+		print('FL:', compute_actual_t(a1_kin_opti, 'FL', -1))
+		print('RR:', compute_actual_t(a1_kin_opti, 'RR', -1))
+		print('RL:', compute_actual_t(a1_kin_opti, 'RL', -1))
+		print(a1_kin_opti.opti.debug.value(a1_kin_opti.time_span))
+		results = {}
+		results['base_poses'] = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses)
+		results['FR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FR_states)
+		results['FL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FL_states)
+		results['RR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RR_states)
+		results['RL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RL_states)
 
-	# 	results['time_span'] = a1_kin_opti.opti.debug.value(a1_kin_opti.time_span)
-	# 	results['total_grid'] = a1_kin_opti.total_grid
-	# 	plot_traj_post_solve(a1_kin_opti)
-
+		results['time_span'] = a1_kin_opti.opti.debug.value(a1_kin_opti.time_span)
+		results['total_grid'] = a1_kin_opti.total_grid
+		plot_traj_post_solve(a1_kin_opti)

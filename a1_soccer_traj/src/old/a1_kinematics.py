@@ -21,16 +21,13 @@ class A1Kinematics():
         self.FR_T = self.FR_fk_dict['T_fk']
         self.FL_T = self.FL_fk_dict['T_fk']
         self.RR_T = self.RR_fk_dict['T_fk']
-        self.RL_T = self.RL_fk_dict['T_fk'] # transformation matrix from world to EF
+        self.RL_T = self.RL_fk_dict['T_fk']
         #self.joint_vel_uppers = np.array([52.4, 28.6, 28.6])
         #self.joint_vel_lowers = np.array([-52.4, -28.6, -28.6])
         #self.joint_vel_uppers = np.array([np.pi, np.pi, np.pi])
         #self.joint_vel_lowers = np.array([-np.pi, -np.pi, -np.pi])
         self.joint_vel_uppers = np.array([np.pi/8, np.pi/8, np.pi/8])
         self.joint_vel_lowers = np.array([-np.pi/8, -np.pi/8, -np.pi/8])
-
-    def cs2np(asd):
-        return ca.Function("temp",[],[asd])()["o0"].toarray()
 
     def get_FR_pose(self, base_pose, FR_motors):
         q = ca.vertcat(base_pose, FR_motors)
@@ -64,27 +61,6 @@ class A1Kinematics():
     # see template from urdf2casadi
     # https://github.com/mahaarbo/urdf2casadi/blob/master/examples/kinematics/UR5_urdf_example.ipynb
 
-    def get_FR_jacobian(self, base_pose, FR_motors):
-        q = self.FR_fk_dict['q']
-        # q = ca.vertcat(base_pose, FR_motors)
-        T_fk = self.FR_fk_dict['T_fk']
-
-        # Create symbols
-        fk_position_jacobian_sym = ca.jacobian(T_fk(q)[:3,3], q)
-        # fk_rotation_jacobian_sym = ca.jacobian(self.get_FR_pose(q)[:3,:3], q)
-        # fk_dual_quaternion_jacobian_sym = ca.jacobian(self.get_FR_pose(q), q)
-        fk_rotation_jacobian_sym = 0
-        fk_dual_quaternion_jacobian_sym = 0
-
-        # Create functions
-        fk_position_jacobian = ca.Function("jac_fk_pos", [q], [fk_position_jacobian_sym], ["q"], ["jac_fk_pos"])
-        # fk_rotation_jacobian = ca.Function("jac_fk_rot", [q], [fk_rotation_jacobian_sym], ["q"], ["jac_fk_rot"])
-        # fk_dual_quaternion_jacobian = ca.Function("jac_fk_Q", [q], [fk_dual_quaternion_jacobian_sym], ["q"], ["jac_fk_Q"])
-        fk_rotation_jacobian = 0
-        fk_dual_quaternion_jacobian = 0
-
-        return fk_position_jacobian, fk_rotation_jacobian, fk_dual_quaternion_jacobian
-    
     # def visualize_robot(self, motor_pos=None):
     #     if motor_pos is not None:
     #         th = {'FR_hip_joint':motor_pos[0], 'FR_thigh_joint':motor_pos[1], 'FR_calf_joint':motor_pos[2], 
