@@ -37,100 +37,26 @@ from pointcloud_segmentation import segment_pointcloud
 
 
 def get_camera_matrix(camera_info_msg):
-    # TODO: Return the camera intrinsic matrix as a 3x3 numpy array
-    # by retreiving information from the CameraInfo ROS message.
-    # Hint: numpy.reshape may be useful here.
-
-    print(np.reshape(camera_info_msg.K, (3,3)))
-
     return np.reshape(camera_info_msg.K, (3,3))
-
-# def convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo):
-#     _intrinsics = pyrealsense2.intrinsics()
-#     _intrinsics.width = cameraInfo.width
-#     _intrinsics.height = cameraInfo.height
-#     _intrinsics.ppx = cameraInfo.K[2]
-#     _intrinsics.ppy = cameraInfo.K[5]
-#     _intrinsics.fx = cameraInfo.K[0]
-#     _intrinsics.fy = cameraInfo.K[4]
-#     #_intrinsics.model = cameraInfo.distortion_model
-#     _intrinsics.model  = pyrealsense2.distortion.none
-#     _intrinsics.coeffs = [i for i in cameraInfo.D]
-#     result = pyrealsense2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)
-#     #result[0]: right, result[1]: down, result[2]: forward
-#     return result[2], -result[0], -result[1]
-
-def isolate_object_of_interest(points, image, camera_info, trans, rot):
-    print("test")
-
-    # UNCOMMENT:
-        # depth = self.latest_depth_im.copy()
-        # mask = segment_image(image)
-
-        # # find contours in the mask and initialize the current
-        # # (x, y) center of the ball
-        # cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        # cnts = imutils.grab_contours(cnts)
-        # center = None
-
-        # # only proceed if at least one contour was found
-        # if len(cnts) > 0:
-        # 	# find the largest contour in the mask, then use
-        # 	# it to compute the minimum enclosing circle and
-        # 	# centroid
-        #     c = max(cnts, key=cv2.contourArea)
-        #     ((x, y), radius) = cv2.minEnclosingCircle(c)
-        #     M = cv2.moments(c)
-        #     center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-        #     print("Center:", center)
-
-
-
-		# only proceed if the radius meets a minimum size
-        ### TODO: Double check that this makes sense for us
-		#if radius > 10:
-			# draw the circle and centroid on the frame,
-			# then update the list of tracked points
-			# cv2.circle(frame, (int(x), int(y)), int(radius),
-			# 	(0, 255, 255), 2)
-			# cv2.circle(frame, center, 5, (0, 0, 255), -1)
-
-        # x, y = center
-        # convert_depth_to_phys_coord_using_realsense(x, y, depth[x,y], camera_info)
-
-    # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
-    # return points
 
 ### A1 SOCCER ###
 
-# def isolate_soccer_ball(points, image, cam_matrix, trans, rot):
-#     segmented_image = segment_image(image)
-#     #points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
-#     #return points
-#     # For each point x,y and depth d
-#     for x,y in segmented_image:
-#         convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo)
-
-#         xyz = np.vstack((points['x'], points['y'], points['z']))
-#     pixel_coords = project_points(xyz, cam_matrix, trans, rot)
-
-# def convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo):
-#     _intrinsics = pyrealsense2.intrinsics()
-#     _intrinsics.width = cameraInfo.width
-#     _intrinsics.height = cameraInfo.height
-#     _intrinsics.ppx = cameraInfo.K[2]
-#     _intrinsics.ppy = cameraInfo.K[5]
-#     _intrinsics.fx = cameraInfo.K[0]
-#     _intrinsics.fy = cameraInfo.K[4]
-#     #_intrinsics.model = cameraInfo.distortion_model
-#     _intrinsics.model  = pyrealsense2.distortion.none
-#     _intrinsics.coeffs = [i for i in cameraInfo.D]
-#     result = pyrealsense2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)
-#     #result[0]: right, result[1]: down, result[2]: forward
-#     return result[2], -result[0], -result[1]
+def convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo):
+    _intrinsics = pyrealsense2.intrinsics()
+    _intrinsics.width = cameraInfo.width
+    _intrinsics.height = cameraInfo.height
+    _intrinsics.ppx = cameraInfo.K[2]
+    _intrinsics.ppy = cameraInfo.K[5]
+    _intrinsics.fx = cameraInfo.K[0]
+    _intrinsics.fy = cameraInfo.K[4]
+    #_intrinsics.model = cameraInfo.distortion_model
+    _intrinsics.model  = pyrealsense2.distortion.none
+    _intrinsics.coeffs = [i for i in cameraInfo.D]
+    result = pyrealsense2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)
+    #result[0]: right, result[1]: down, result[2]: forward
+    return result[2], -result[0], -result[1]
 
 def isolate_object_of_interest_old(points, image, cam_matrix, trans, rot):
-    print("test")
     segmented_image = segment_image(image)
     points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
     return points
@@ -168,20 +94,51 @@ class PointcloudProcess:
         self.points_pub = rospy.Publisher(points_pub_topic, PointCloud2, queue_size=10)
         self.image_pub = rospy.Publisher('segmented_image', Image, queue_size=10)
         
-        ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, caminfo_sub], #depth_sub,
+        ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, caminfo_sub],
                                                           10, 0.1, allow_headerless=True)
+                                                10, 0.1, allow_headerless=True)
         ts.registerCallback(self.callback)
 
-    def callback(self, points_msg, image, info):
+    def isolate_object_of_interest(self, points, image, camera_info, trans, rot):
+
+        depth = self.latest_depth_im.copy()
+        mask = segment_image(image)
+
+        # find contours in the mask and initialize the current
+        # (x, y) center of the ball
+        cnts = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+        cnts = imutils.grab_contours(cnts)
+        center = None
+
+        # only proceed if at least one contour was found
+        if len(cnts) > 0:
+            # find the largest contour in the mask, then use
+            # it to compute the minimum enclosing circle and
+            # centroid
+            c = max(cnts, key=cv2.contourArea)
+            ((x, y), radius) = cv2.minEnclosingCircle(c)
+            M = cv2.moments(c)
+            center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+            print("Center:", center)
+
+        ### TODO: use convert_depth_to_phys_coord_using_realsense for the center point
+        # x, y = center
+        # convert_depth_to_phys_coord_using_realsense(x, y, depth[x,y], camera_info)
+
+        ### Old code
+            # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
+            # return points
+    
+    def callback(self, points_msg, image, depth, info): 
         try:
             intrinsic_matrix = get_camera_matrix(info)
             rgb_image = ros_numpy.numpify(image)
             points = ros_numpy.numpify(points_msg)
 
             ### A1 SOCCER ###
-            #depth_image = self.cv_bridge.imgmsg_to_cv2(depth, desired_encoding='passthrough')
-            #depth_array = np.array(depth_image, dtype=np.float32)
-            #self.latest_depth_im = depth_array
+            depth_image = self.cv_bridge.imgmsg_to_cv2(depth, desired_encoding='passthrough')
+            depth_array = np.array(depth_image, dtype=np.float32)
+            self.latest_depth_im = depth_array
 
         except Exception as e:
             rospy.logerr(e)
@@ -202,12 +159,9 @@ class PointcloudProcess:
                     tf.ConnectivityException, 
                     tf.ExtrapolationException):
                 return
-            #points = isolate_object_of_interest_old(points, image, info, 
-                #np.array(trans), np.array(rot))
 
             ### A1 SOCCER ###
-            print("test2")
-            points = isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
+            points = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
 
             points_msg = numpy_to_pc2_msg(points)
             self.points_pub.publish(points_msg)
@@ -217,7 +171,9 @@ class PointcloudProcess:
 def main():
     CAM_INFO_TOPIC = '/camera/color/camera_info'
     RGB_IMAGE_TOPIC = '/camera/color/image_raw'
-    DEPTH_IMAGE_TOPIC = '/camera/aligned_depth_to_color/image_raw'
+    ### TODO: Jason's example uses '/camera/aligned_depth_to_color/image_raw'
+    ### but this topic is not listed in rostopic list
+    DEPTH_IMAGE_TOPIC = '/camera/depth/image_rect_raw'
     POINTS_TOPIC = '/camera/depth/color/points'
     POINTS_PUB_TOPIC = 'segmented_points'
 
