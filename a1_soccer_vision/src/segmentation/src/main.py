@@ -42,7 +42,7 @@ def get_camera_matrix(camera_info_msg):
 ### A1 SOCCER ###
 
 def convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo):
-    _intrinsics = pyrealsense2.intrinsics()
+    _intrinsics = rs2.intrinsics()
     _intrinsics.width = cameraInfo.width
     _intrinsics.height = cameraInfo.height
     _intrinsics.ppx = cameraInfo.K[2]
@@ -50,9 +50,9 @@ def convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo):
     _intrinsics.fx = cameraInfo.K[0]
     _intrinsics.fy = cameraInfo.K[4]
     #_intrinsics.model = cameraInfo.distortion_model
-    _intrinsics.model  = pyrealsense2.distortion.none
+    _intrinsics.model  = rs2.distortion.none
     _intrinsics.coeffs = [i for i in cameraInfo.D]
-    result = pyrealsense2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)
+    result = rs2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)
     #result[0]: right, result[1]: down, result[2]: forward
     return result[2], -result[0], -result[1]
 
@@ -96,7 +96,7 @@ class PointcloudProcess:
         
         ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, caminfo_sub],
                                                           10, 0.1, allow_headerless=True)
-                                                10, 0.1, allow_headerless=True)
+
         ts.registerCallback(self.callback)
 
     def isolate_object_of_interest(self, points, image, camera_info, trans, rot):
@@ -120,10 +120,12 @@ class PointcloudProcess:
             M = cv2.moments(c)
             center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
             print("Center:", center)
+        else:
+            print("No contours found")
 
         ### TODO: use convert_depth_to_phys_coord_using_realsense for the center point
-        # x, y = center
-        # convert_depth_to_phys_coord_using_realsense(x, y, depth[x,y], camera_info)
+        x, y = center
+        convert_depth_to_phys_coord_using_realsense(x, y, depth[x,y], camera_info)
 
         ### Old code
             # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
