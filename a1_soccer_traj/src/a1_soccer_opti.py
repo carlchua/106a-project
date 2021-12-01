@@ -28,6 +28,7 @@ class A1KinematicsOpti:
 		self.lambda_num = 3
 		self.total_grid = 50 # knot num of traj opti
 		self.min_time = 4
+		self.vel_bool = False
 
 		# weights of the cost
 		# dx dy dz droll dpitch dyaw
@@ -134,8 +135,8 @@ class A1KinematicsOpti:
 	def set_init_ef_pos(self,init_ef_pos):
 		self.init_ef_pos = init_ef_pos
 
-	def set_mid_ef_pos(self, mid_ef_pos):
-		self.mid_ef_pos = mid_ef_pos
+	def set_vel_bool(self, bool_val):
+		self.vel_bool = bool_val
 
 	def set_final_ef_pos(self,final_ef_pos):
 		self.final_ef_pos = final_ef_pos
@@ -316,7 +317,7 @@ class A1KinematicsOpti:
 		self.__addBaseNodeCost(self.init_base_pose, -1) # force the base to move as little as possible
 		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOTE: change the target state constraint to be soccer one
 		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one
-		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel, False)
+		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel, self.vel_bool)
 		# NOTE: try traget state as constraint
 
 		# self.opti.subject_to(self.final_ef_pos == self.desired_ef_pos + final_node_slacking)
@@ -411,15 +412,12 @@ if __name__ == "__main__":
 	init_ef_pos = np.array([0.183, -0.13205, 0, 0, 0, 0])
 	a1_kin_opti.set_init_ef_pos(init_ef_pos)
 
-	# Middle location
-	mid_ef_pos = np.array([])
-	a1_kin_opti.set_mid_ef_pos(mid_ef_pos)
-
 	# Final location
-	final_ef_pos = np.array([0.1, -0.16, 0.2, 0, -0.75*np.pi, 0]) #small lift
+	final_ef_pos = np.array([0.1, -0.1, 0.2, 0, -0.5*np.pi, 0]) #small lift
 	a1_kin_opti.set_final_ef_pos(final_ef_pos)
 	final_ef_vel = np.array([0, 0, 0])
 	a1_kin_opti.set_final_ef_vel(final_ef_vel)
+	a1_kin_opti.set_vel_bool(True)
 
 	a1_kin_opti.set_FL_pos(np.array([0.183, 0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RR_pos(np.array([-0.183, -0.13205, 0, 0, 0, 0]))
@@ -429,6 +427,39 @@ if __name__ == "__main__":
 	base_sol, FR_joint_sol, FL_joint_sol, RR_joint_sol, RL_joint_sol = a1_kin_opti.solve()
 	motor_last = np.concatenate([FR_joint_sol[:,-1], FL_joint_sol[:,-1], RR_joint_sol[:,-1], RL_joint_sol[:,-1]])
 	base_last = base_sol[:,-1]
+
+############################ SECOND LOOP #######################################
+	a1_kin_opti_next = A1KinematicsOpti()
+	init_base_pose2 = base_sol[:, -1]
+
+	a1_kin_opti_next.set_init_base_pose(init_base_pose2)
+	a1_kin_opti_next.set_end_effector('FR')
+
+	init_ef_pos = a1_kin_opti.get_foot_pos('FR', -1)
+	a1_kin_opti_next.set_init_ef_pos(init_ef_pos)
+
+	# Final location
+	final_ef_pos2 = np.array([0.2, -0.2, 0.3, 0, -0.75*np.pi, 0]) #small lift
+	a1_kin_opti_next.set_final_ef_pos(final_ef_pos2)
+	final_ef_vel2 = np.array([0, 0, 0])
+	a1_kin_opti_next.set_final_ef_vel(final_ef_vel2)
+	a1_kin_opti_next.set_vel_bool(False)
+
+	fl_pos = a1_kin_opti.get_foot_pos('FL', -1)
+	a1_kin_opti_next.set_FL_pos(fl_pos)
+
+	rr_pos = a1_kin_opti.get_foot_pos('RR', -1)
+	a1_kin_opti_next.set_RR_pos(rr_pos)
+
+	rl_pos = a1_kin_opti.get_foot_pos('RL', -1)
+	a1_kin_opti_next.set_RL_pos(rl_pos)
+
+	# try:
+	base_sol2, FR_joint_sol2, FL_joint_sol2, RR_joint_sol2, RL_joint_sol2 = a1_kin_opti_next.solve()
+	motor_last2 = np.concatenate([FR_joint_sol2[:,-1], FL_joint_sol2[:,-1], RR_joint_sol2[:,-1], RL_joint_sol2[:,-1]])
+	base_last2 = base_sol2[:,-1]
+
+
 	print('FR0:', compute_actual_t(a1_kin_opti, 'FR', 0))
 	print('FR:', compute_actual_t(a1_kin_opti, 'FR', -1))
 	print('FL:', compute_actual_t(a1_kin_opti, 'FL', -1))
