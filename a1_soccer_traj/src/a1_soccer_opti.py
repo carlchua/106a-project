@@ -6,8 +6,6 @@ from mpl_toolkits.mplot3d import Axes3D
 import pickle
 import json
 
-# for Jacobian
-
 class A1KinematicsOpti:
 	def __init__(self):
 		self.opti = ca.Opti()
@@ -33,6 +31,7 @@ class A1KinematicsOpti:
 		# weights of the cost
 		# dx dy dz droll dpitch dyaw
 		self.w_vel = np.array([5,5,5,5,5,5])
+		self.w_vel_alt = np.array([5,5,5,5,5,5])
 		# diff_x ,diff_y, diff_z, cos_diff_roll, cos_diff_pitch, cos_diff_yaw
 		self.w_final = np.array([500,500,500,100,100,100])
 		self.w_ef = np.array([50,50,250,10,10,10])
@@ -117,10 +116,9 @@ class A1KinematicsOpti:
 
 			self.final_ef_vel_cost = ca.mtimes(w.reshape((1,6)), ca.vertcat(vel_diff, rot_diff))
 			self.total_cost += self.final_ef_vel_cost
-		else:
-			curr_vel_mag = np.sqrt(current_velocity[0]**2 + current_velocity[1]**2 + current_velocity[2]**2)
-
-			self.total_cost += w*curr_vel_mag
+		# else:
+		# 	curr_vel_mag = np.sqrt(current_velocity[0]**2 + current_velocity[1]**2 + current_velocity[2]**2)
+		# 	self.total_cost += w*curr_vel_mag
 	###############
 
 	def __addTotalTimeCost(self):
@@ -158,6 +156,9 @@ class A1KinematicsOpti:
 
 	def set_min_time(self, min_t):
 		self.min_time = min_t
+
+	def set_w_vel_alt(self, w_vel_alt):
+		self.w_vel_alt = w_vel_alt
 
 	# ef could be set to either 'FR' or 'FL'
 	def set_end_effector(self, ef):
@@ -317,7 +318,7 @@ class A1KinematicsOpti:
 		self.__addBaseNodeCost(self.init_base_pose, -1) # force the base to move as little as possible
 		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOTE: change the target state constraint to be soccer one
 		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one
-		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel, self.vel_bool)
+		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel_alt, self.vel_bool)
 		# NOTE: try traget state as constraint
 
 		# self.opti.subject_to(self.final_ef_pos == self.desired_ef_pos + final_node_slacking)
@@ -326,11 +327,6 @@ class A1KinematicsOpti:
 		# self.opti.subject_to(self.final_ef_vel == self.desired_ef_vel + final_vel_slacking)
 		# self.total_cost += large_weight*final_vel_slacking**2
 		# self.opti.subject_to(self.pelvis_states[:,-1]==self.final_pelvis_pose)
-
-		#Middle time
-
-		self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], None, 24, self.w_mid_vel, True)
-
 		self.opti.minimize(self.total_cost)
 
 		sol = self.opti.solve()
@@ -409,19 +405,23 @@ if __name__ == "__main__":
 	a1_kin_opti.set_init_base_pose(init_base_pose)
 	a1_kin_opti.set_end_effector('FR')
 
+	# Initial position for first loop
 	init_ef_pos = np.array([0.183, -0.13205, 0, 0, 0, 0])
 	a1_kin_opti.set_init_ef_pos(init_ef_pos)
 
-	# Final location
+	# Final location for first loop
 	final_ef_pos = np.array([0.1, -0.1, 0.2, 0, -0.5*np.pi, 0]) #small lift
 	a1_kin_opti.set_final_ef_pos(final_ef_pos)
 	final_ef_vel = np.array([0, 0, 0])
 	a1_kin_opti.set_final_ef_vel(final_ef_vel)
 	a1_kin_opti.set_vel_bool(True)
 
+	# Set other 3 legs init pos
 	a1_kin_opti.set_FL_pos(np.array([0.183, 0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RR_pos(np.array([-0.183, -0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RL_pos(np.array([-0.183, 0.13205, 0, 0, 0, 0]))
+
+	a1_kin_opti.set_w_vel_alt(-1)
 
 	# try:
 	base_sol, FR_joint_sol, FL_joint_sol, RR_joint_sol, RL_joint_sol = a1_kin_opti.solve()
@@ -435,24 +435,42 @@ if __name__ == "__main__":
 	a1_kin_opti_next.set_init_base_pose(init_base_pose2)
 	a1_kin_opti_next.set_end_effector('FR')
 
-	init_ef_pos = a1_kin_opti.get_foot_pos('FR', -1)
-	a1_kin_opti_next.set_init_ef_pos(init_ef_pos)
+	# Set FR init pos
+	pos, rot = a1_kin_opti_next.a1_kin.get_FR_pose(base_last, FR_joint_sol[:, -1])
+	pos = np.array(pos)
+	R = np.array(rot)
+	eft = ca.vertcat(pos, ca.atan2(R[1,0], R[0,0]), ca.atan2(-R[2,0], ca.sqrt(R[2,1]**2 + R[2,2]**2)), ca.atan2(R[2,1], R[2,2]))
+	eft = np.array(eft).reshape(6,)
+	a1_kin_opti_next.set_init_ef_pos(eft)
 
-	# Final location
+	# Final location for second loop
 	final_ef_pos2 = np.array([0.2, -0.2, 0.3, 0, -0.75*np.pi, 0]) #small lift
 	a1_kin_opti_next.set_final_ef_pos(final_ef_pos2)
 	final_ef_vel2 = np.array([0, 0, 0])
 	a1_kin_opti_next.set_final_ef_vel(final_ef_vel2)
 	a1_kin_opti_next.set_vel_bool(False)
 
-	fl_pos = a1_kin_opti.get_foot_pos('FL', -1)
-	a1_kin_opti_next.set_FL_pos(fl_pos)
+	# Set other 3 legs init pos
+	pos, rot = a1_kin_opti_next.a1_kin.get_FL_pose(base_last, FL_joint_sol[:, -1])
+	pos = np.array(pos)
+	R = np.array(rot)
+	eft = ca.vertcat(pos, ca.atan2(R[1,0], R[0,0]), ca.atan2(-R[2,0], ca.sqrt(R[2,1]**2 + R[2,2]**2)), ca.atan2(R[2,1], R[2,2]))
+	eft = np.array(eft).reshape(6,)
+	a1_kin_opti_next.set_FL_pos(eft)
 
-	rr_pos = a1_kin_opti.get_foot_pos('RR', -1)
-	a1_kin_opti_next.set_RR_pos(rr_pos)
+	pos, rot = a1_kin_opti_next.a1_kin.get_RR_pose(base_last, RR_joint_sol[:, -1])
+	pos = np.array(pos)
+	R = np.array(rot)
+	eft = ca.vertcat(pos, ca.atan2(R[1,0], R[0,0]), ca.atan2(-R[2,0], ca.sqrt(R[2,1]**2 + R[2,2]**2)), ca.atan2(R[2,1], R[2,2]))
+	eft = np.array(eft).reshape(6,)
+	a1_kin_opti_next.set_RR_pos(eft)
 
-	rl_pos = a1_kin_opti.get_foot_pos('RL', -1)
-	a1_kin_opti_next.set_RL_pos(rl_pos)
+	pos, rot = a1_kin_opti_next.a1_kin.get_RL_pose(base_last, RL_joint_sol[:, -1])
+	pos = np.array(pos)
+	R = np.array(rot)
+	eft = ca.vertcat(pos, ca.atan2(R[1,0], R[0,0]), ca.atan2(-R[2,0], ca.sqrt(R[2,1]**2 + R[2,2]**2)), ca.atan2(R[2,1], R[2,2]))
+	eft = np.array(eft).reshape(6,)
+	a1_kin_opti_next.set_RL_pos(eft)
 
 	# try:
 	base_sol2, FR_joint_sol2, FL_joint_sol2, RR_joint_sol2, RL_joint_sol2 = a1_kin_opti_next.solve()
@@ -467,6 +485,7 @@ if __name__ == "__main__":
 	print('RL:', compute_actual_t(a1_kin_opti, 'RL', -1))
 	print(a1_kin_opti.opti.debug.value(a1_kin_opti.time_span))
 	plot_traj_post_solve(a1_kin_opti)
+	plot_traj_post_solve(a1_kin_opti_next)
 	results = {}
 	resultsjson = {}
 	results['base_poses'] = a1_kin_opti.opti.debug.value(a1_kin_opti.base_poses)
