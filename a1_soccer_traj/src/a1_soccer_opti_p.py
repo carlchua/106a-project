@@ -39,8 +39,8 @@ class A1KinematicsOpti:
 		self.w_time = 10
 		self.w_rpy = np.array([5, 5, 5])
 
-		#added weights for midpoint
-		self.w_mid_vel = -1
+		#added weights for midpoint range
+		self.w_mid_vel = np.array([500, 500, 500, 500, 500])
 
 		# self.ipopt_option = {"verbose": False, "ipopt.print_level": 0, "print_time": 0}
 		#self.ipopt_option = {"max_iter": 100}
@@ -401,7 +401,7 @@ class A1KinematicsOpti:
 
 		#Final time
 		self.__addBaseNodeCost(self.init_base_pose, -1) # force the base to move as little as possible
-		# self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOTE: change the target state constraint to be soccer one
+		self.__addEFNodeCost(self.final_ef_pos, -1, self.w_ef_final) # NOTE: change the target state constraint to be soccer one
 		# NOTE: add constraint to force the end effector velocity at the end node to be a desired one
 		##############HERE
 		# self.__addEFVelocityCost(self.base_poses[:, -1], self.FR_states[:, -1], self.final_ef_vel, -1, self.w_vel_alt, self.vel_bool)
@@ -427,10 +427,11 @@ class A1KinematicsOpti:
 		# self.opti.subject_to(self.final_ef_states == self.final_ef_pos + final_nodes_slacking)
 		# self.opti.subject_to(self.final_ef_states == self.final_ef_pos + final_nodes_slacking)
 
-		self.opti.subject_to(self.final_ef_states == self.final_ef_pos + final_nodes_slacking)
-		self.opti.subject_to(self.final_ef_vels == self.final_ef_pos + final_nodes_slacking)
-		self.total_cost += large_weight * ca.sum(final_nodes_slacking)
-		self.total_cost += large_weight * ca.sum(final_vel_slacking)
+		# # End position constraints 
+		# self.opti.subject_to(self.final_ef_states == self.final_ef_pos + final_nodes_slacking)
+		# self.opti.subject_to(self.final_ef_vels == self.final_ef_pos + final_nodes_slacking)
+		# self.total_cost += large_weight * ca.sum(final_nodes_slacking)
+		# self.total_cost += large_weight * ca.sum(final_vel_slacking)
 
 		#######################################################################################
 		#######################################################################################
@@ -453,18 +454,18 @@ class A1KinematicsOpti:
 			FR_joint_vel = sol.value(self.FR_vels)
 			base_vel = sol.value(self.base_vels)
 		except:
-			base_sol = sol.debug.value(self.base_poses)
-			RR_joint_sol = sol.debug.value(self.RR_states)
-			RL_joint_sol = sol.debug.value(self.RL_states)
-			FL_joint_sol = sol.debug.value(self.FL_states)
-			FR_joint_sol = sol.debug.value(self.FR_states)
-			input_sol = sol.debug.value(self.inputs)
-			time_sol = sol.debug.value(self.time_span)
-			RR_joint_vel = sol.debug.value(self.RR_vels)
-			RL_joint_vel = sol.debug.value(self.RL_vels)
-			FL_joint_vel = sol.debug.value(self.FL_vels)
-			FR_joint_vel = sol.debug.value(self.FR_vels)
-			base_vel = sol.debug.value(self.base_vels)
+			# base_sol = sol.debug.value(self.base_poses)
+			# RR_joint_sol = sol.debug.value(self.RR_states)
+			# RL_joint_sol = sol.debug.value(self.RL_states)
+			# FL_joint_sol = sol.debug.value(self.FL_states)
+			# FR_joint_sol = sol.debug.value(self.FR_states)
+			# input_sol = sol.debug.value(self.inputs)
+			# time_sol = sol.debug.value(self.time_span)
+			# RR_joint_vel = sol.debug.value(self.RR_vels)
+			# RL_joint_vel = sol.debug.value(self.RL_vels)
+			# FL_joint_vel = sol.debug.value(self.FL_vels)
+			# FR_joint_vel = sol.debug.value(self.FR_vels)
+			# base_vel = sol.debug.value(self.base_vels)
 
 		# self.last_FL_vel = 0
 		# self.last_FR_vel = FR_joint_vel[:, -2]
