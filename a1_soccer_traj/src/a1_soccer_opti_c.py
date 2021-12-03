@@ -374,11 +374,11 @@ class A1KinematicsOpti:
 		self.__addTotalTimeCost()
 
 		#Middle time
-		for t in range(15,20):
+		for t in range(10,13):
 			final_node_slacking = self.opti.variable(6)
 			ef_foot_k = self.ef_pos_var[:, t]
 			self.opti.subject_to(ef_foot_k == self.mid_ef_pos + final_node_slacking)
-			self.total_cost += 50*ca.sum1(final_node_slacking**2)
+			self.total_cost += 10*ca.sum1(final_node_slacking**2)
 
 
 		#Final time
@@ -471,15 +471,17 @@ if __name__ == "__main__":
 	init_ef_pos = np.array([0.183, -0.13205, 0, 0, 0, 0])
 	a1_kin_opti.set_init_ef_pos(init_ef_pos)
 
-	# Middle location (or set cost on velocities outside the midrange)
-	mid_ef_pos = np.array([0.23, -0.13205, 0.08, 0, -0.3*np.pi, 0])
-	a1_kin_opti.set_mid_ef_pos(mid_ef_pos)
-
 	# Final location
 	final_ef_pos = np.array([0.25, -0.13205, 0.16, 0, -0.6*np.pi, 0]) #small lift
 	a1_kin_opti.set_final_ef_pos(final_ef_pos)
 	final_ef_vel = np.array([0, 0, 0])
 	a1_kin_opti.set_final_ef_vel(final_ef_vel)
+
+	# Middle location (or set cost on velocities outside the midrange)
+	delta_mid = (final_ef_pos - init_ef_pos)/10
+	# mid_ef_pos = np.array([0.23, -0.13205, 0.08, 0, -0.3*np.pi, 0])
+	mid_ef_pos = init_ef_pos + delta_mid
+	a1_kin_opti.set_mid_ef_pos(mid_ef_pos)
 
 	a1_kin_opti.set_FL_pos(np.array([0.183, 0.13205, 0, 0, 0, 0]))
 	a1_kin_opti.set_RR_pos(np.array([-0.183, -0.13205, 0, 0, 0, 0]))
