@@ -38,7 +38,7 @@ class A1Kinematics():
         pos = T0[:3, 3]
         rot = T0[:3, :3]
         return pos, rot
-    
+
     def get_FL_pose(self, base_pose, FL_motors):
         q = ca.vertcat(base_pose, FL_motors)
         T0 = self.FL_T(q)
@@ -52,7 +52,7 @@ class A1Kinematics():
         pos = T0[:3, 3]
         rot = T0[:3, :3]
         return pos, rot
-    
+
     def get_RL_pose(self, base_pose, RL_motors):
         q = ca.vertcat(base_pose, RL_motors)
         T0 = self.RL_T(q)
@@ -84,12 +84,12 @@ class A1Kinematics():
         fk_dual_quaternion_jacobian = 0
 
         return fk_position_jacobian, fk_rotation_jacobian, fk_dual_quaternion_jacobian
-    
+
     # def visualize_robot(self, motor_pos=None):
     #     if motor_pos is not None:
-    #         th = {'FR_hip_joint':motor_pos[0], 'FR_thigh_joint':motor_pos[1], 'FR_calf_joint':motor_pos[2], 
-    #             'FL_hip_joint':motor_pos[3], 'FL_thigh_joint':motor_pos[4], 'FL_calf_joint':motor_pos[5], 
-    #             'RR_hip_joint':motor_pos[6], 'RR_thigh_joint':motor_pos[7], 'RR_calf_joint':motor_pos[8], 
+    #         th = {'FR_hip_joint':motor_pos[0], 'FR_thigh_joint':motor_pos[1], 'FR_calf_joint':motor_pos[2],
+    #             'FL_hip_joint':motor_pos[3], 'FL_thigh_joint':motor_pos[4], 'FL_calf_joint':motor_pos[5],
+    #             'RR_hip_joint':motor_pos[6], 'RR_thigh_joint':motor_pos[7], 'RR_calf_joint':motor_pos[8],
     #             'RL_hip_joint':motor_pos[9], 'RL_thigh_joint':motor_pos[10], 'RL_calf_joint':motor_pos[11]}
     #     else:
     #         th = {}
@@ -112,5 +112,3 @@ if __name__ == "__main__":
     print("FL:", ak.FL_T([5.33124525e-03, 1.40476550e-04, 2.96701968e-01, 2.21779981e-02, -2.95332678e-03, -4.35811163e-01, 0.10806939, 0.87501563, -1.2839156])[[0, 1, 2], 3])
     print("RR:", ak.RR_T([5.33124525e-03, 1.40476550e-04, 2.96701968e-01, 2.21779981e-02, -2.95332678e-03, -4.35811163e-01, -0.16803905, 0.48412645, -1.32322079])[[0, 1, 2], 3])
     print("RL:", ak.RL_T([5.33124525e-03, 1.40476550e-04, 2.96701968e-01, 2.21779981e-02, -2.95332678e-03, -4.35811163e-01, -0.39999989, 0.85956598, -1.46872909])[[0, 1, 2], 3])
-
-
