@@ -24,6 +24,7 @@ import tf
 import pyrealsense2 as rs2
 import cv2
 import imutils
+import matplotlib.pyplot as plt
 
 from sensor_msgs.msg import Image, CameraInfo, PointCloud2
 
@@ -33,6 +34,7 @@ import cv2
 from cv_bridge import CvBridge
 
 from image_segmentation import segment_image
+from image_segmentation import show_image_with_point
 from pointcloud_segmentation import segment_pointcloud
 
 
@@ -110,22 +112,35 @@ class PointcloudProcess:
         cnts = imutils.grab_contours(cnts)
         center = None
 
-        # only proceed if at least one contour was found
-        if len(cnts) > 0:
-            # find the largest contour in the mask, then use
-            # it to compute the minimum enclosing circle and
-            # centroid
-            c = max(cnts, key=cv2.contourArea)
-            ((x, y), radius) = cv2.minEnclosingCircle(c)
-            M = cv2.moments(c)
-            center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-            print("Center:", center)
-        else:
-            print("No contours found")
 
-        ### TODO: use convert_depth_to_phys_coord_using_realsense for the center point
-        x, y = center
-        convert_depth_to_phys_coord_using_realsense(x, y, depth[x,y], camera_info)
+        for c in cnts:
+            # only proceed if at least one contour was found
+            if len(c) > 0:
+                # find the largest contour in the mask, then use
+                # it to compute the minimum enclosing circle and
+                # centroid
+                #c = max(cnts, key=cv2.contourArea)
+                ((x, y), radius) = cv2.minEnclosingCircle(c)
+                M = cv2.moments(c)
+                center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+                print("Center:", center)
+                ### TODO: use convert_depth_to_phys_coord_using_realsense for the center point
+                x, y = center
+
+                #show_image_with_point(image, center)
+
+                depth_val = None
+                try:
+                    depth_val = depth[x,y]
+                    center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
+                    #return center_soccer_point_3d
+                except:
+                    print("Center of ball not in frame. Skipping")
+            else:
+                print("No contours found. Skipping")
+
+
+        
 
         ### Old code
             # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
@@ -134,6 +149,7 @@ class PointcloudProcess:
     def callback(self, points_msg, image, depth, info): 
         try:
             intrinsic_matrix = get_camera_matrix(info)
+            intrinsic_matrix = info
             rgb_image = ros_numpy.numpify(image)
             points = ros_numpy.numpify(points_msg)
 
@@ -163,19 +179,21 @@ class PointcloudProcess:
                 return
 
             ### A1 SOCCER ###
-            points = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
+            center_soccer_point = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
 
-            points_msg = numpy_to_pc2_msg(points)
-            self.points_pub.publish(points_msg)
-            print("Published segmented pointcloud at timestamp:",
-                   points_msg.header.stamp.secs)
+            #points_msg = numpy_to_pc2_msg(points)
+            #self.points_pub.publish(points_msg)
+            #print("Published segmented pointcloud at timestamp:",
+            #       points_msg.header.stamp.secs)
+            print("Publishing soccer point:", center_soccer_point)
+            #"at timestamp:", points_msg.header.stamp.secs)
 
 def main():
-    CAM_INFO_TOPIC = '/camera/color/camera_info'
+    CAM_INFO_TOPIC = '/camera/aligned_depth_to_color/camera_info' #'/camera/color/camera_info'
+    #CAM_INFO_TOPIC = '/camera/color/camera_info'
     RGB_IMAGE_TOPIC = '/camera/color/image_raw'
-    ### TODO: Jason's example uses '/camera/aligned_depth_to_color/image_raw'
-    ### but this topic is not listed in rostopic list
-    DEPTH_IMAGE_TOPIC = '/camera/depth/image_rect_raw'
+    DEPTH_IMAGE_TOPIC = '/camera/aligned_depth_to_color/image_raw' #'/camera/depth/image_rect_raw'
+    #DEPTH_IMAGE_TOPIC = '/camera/depth/image_rect_raw'
     POINTS_TOPIC = '/camera/depth/color/points'
     POINTS_PUB_TOPIC = 'segmented_points'
 

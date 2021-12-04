@@ -5,7 +5,7 @@ Author: Grant Wang
 
 This Python file is the skeleton code for Lab 3. You are expected to fill in
 the body of the incomplete functions below to complete the lab. The 'test_..'
-functions are already defined for you for allowing you to check your 
+functions are already defined for you for allowing you to check your
 implementations.
 
 When you believe you have completed implementations of all the incompeleted
@@ -17,6 +17,8 @@ import os
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
+# import matplotlib
+# matplotlib.use('Agg')
 
 this_file = os.path.dirname(os.path.abspath(__file__))
 IMG_DIR = '/'.join(this_file.split('/')[:-2]) + '/img'
@@ -30,7 +32,7 @@ def read_image(img_name, grayscale=False):
         name of image
     grayscale : boolean
         true if image is in grayscale, false o/w
-    
+
     Returns
     -------
     ndarray
@@ -46,7 +48,7 @@ def read_image(img_name, grayscale=False):
 
 def write_image(img, img_name):
     """writes the image as a file
-    
+
     Parameters
     ----------
     img : ndarray
@@ -59,6 +61,28 @@ def write_image(img, img_name):
 
 def show_image(img_name, title='Fig', grayscale=False):
     """show the  as a matplotlib figure
+
+    Parameters
+    ----------
+    img_name : str
+        name of image
+    tile : str
+        title to give the figure shown
+    grayscale : boolean
+        true if image is in grayscale, false o/w
+    """
+
+    if not grayscale:
+        plt.imshow(img_name)
+        plt.title(title)
+        plt.show()
+    else:
+        plt.imshow(img_name, cmap='gray')
+        plt.title(title)
+        plt.show()
+
+def show_image_with_point(img_name, point, title='Fig', grayscale=False):
+    """show the  as a matplotlib figure
     
     Parameters
     ----------
@@ -69,6 +93,8 @@ def show_image(img_name, title='Fig', grayscale=False):
     grayscale : boolean
         true if image is in grayscale, false o/w
     """
+
+    plt.plot(point[0], point[1], marker='v', color="white")
 
     if not grayscale:
         plt.imshow(img_name)
@@ -99,11 +125,11 @@ def threshold_segment_naive(gray_img, lower_thresh, upper_thresh):
     ndarray
         thresholded version of gray_img
     """
-    # TODO: Implement threshold segmentation by setting pixels of gray_img inside the 
+    # TODO: Implement threshold segmentation by setting pixels of gray_img inside the
     # lower_thresh and upper_thresh parameters to 1
-    # Then set any value that is outside the range to be 0 
+    # Then set any value that is outside the range to be 0
     # Hints: make a copy of gray_img so that we don't alter the original image
-    # Boolean array indexing, or masking will come in handy. 
+    # Boolean array indexing, or masking will come in handy.
     # See https://docs.scipy.org/doc/numpy-1.13.0/user/basics.indexing.html
 
     new_img = gray_img.copy()
@@ -115,6 +141,49 @@ def threshold_segment_naive(gray_img, lower_thresh, upper_thresh):
             else:
                 new_img[i][j] = 0
     return new_img
+
+def threshold_segment_naive2(color_img, lt0, ut0, lt1, ut1, lt2, ut2):
+    """perform grayscale thresholding using a lower and upper threshold by
+    blacking the background and whitening lying between the threholds (the
+    foreground)
+
+    Parameter
+    ---------
+    gray_img : ndarray
+        grayscale image array
+    lower_thresh : float or int
+        lowerbound to threshold (an intensity value between 0-255)
+    upper_thresh : float or int
+        upperbound to threshold (an intensity value between 0-255)
+
+    Returns
+    -------
+    ndarray
+        thresholded version of gray_img
+    """
+    # TODO: Implement threshold segmentation by setting pixels of gray_img inside the
+    # lower_thresh and upper_thresh parameters to 1
+    # Then set any value that is outside the range to be 0
+    # Hints: make a copy of gray_img so that we don't alter the original image
+    # Boolean array indexing, or masking will come in handy.
+    # See https://docs.scipy.org/doc/numpy-1.13.0/user/basics.indexing.html
+
+    new_img = color_img.copy()
+    new_img = cv2.GaussianBlur(new_img, (19, 19), 0)
+    show_image(new_img, title='img_blurred')
+    img_masked = np.zeros((new_img.shape[0], new_img.shape[1]))
+    for i in range(new_img.shape[0]):
+        for j in range(new_img.shape[1]):
+            pixel = new_img[i][j]
+            r,g,b = int(pixel[0]), int(pixel[1]), int(pixel[2])
+            if r>=lt0 and r<=ut0 and g>=lt1 and g<=ut1 and b>=lt2 and b<=ut2:
+                img_masked[i][j] = 1
+                sim = 50
+                if np.absolute(r-g)<=sim and np.absolute(g-b)<=sim and np.absolute(r-b)<=sim:
+                        img_masked[i][j] = 0
+            # else:
+            #     img_masked[i][j] = 0
+    return img_masked
 
 def edge_detect_naive(gray_img):
     """perform edge detection using first two steps of Canny (Gaussian blurring and Sobel
@@ -131,10 +200,10 @@ def edge_detect_naive(gray_img):
         gray_img with edges outlined
     """
 
-    gray_s = gray_img.astype('int16') # convert to int16 for better img quality 
+    gray_s = gray_img.astype('int16') # convert to int16 for better img quality
     # TODO: Blur gray_s using Gaussian blurring, convole the blurred image with
     # Sobel filters, and combine to compute the intensity gradient image (image with edges highlighted)
-    # Hints: open-cv GaussianBlur will be helpful https://medium.com/analytics-vidhya/gaussian-blurring-with-python-and-opencv-ba8429eb879b 
+    # Hints: open-cv GaussianBlur will be helpful https://medium.com/analytics-vidhya/gaussian-blurring-with-python-and-opencv-ba8429eb879b
     # Use opencv's filter2D to perform the convolution.
 
     # Steps
@@ -196,7 +265,7 @@ def do_kmeans(data, n_clusters):
        Returns:
          clusters: integer array of length n_datapoints. clusters[i] is
          a number in range(n_clusters) specifying which cluster data[i]
-         was assigned to. 
+         was assigned to.
     """
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.2)
     _, clusters, centers = kmeans = cv2.kmeans(data.astype(np.float32), n_clusters, bestLabels=None, criteria=criteria, attempts=1, flags=cv2.KMEANS_RANDOM_CENTERS)
@@ -231,12 +300,12 @@ def cluster_segment(img, n_clusters, random_state=0):
     # first convert our 3-dimensional img_d array to a 2-dimensional array
     # whose shape will be (height * width, number of channels) hint: use img_d.shape
     img_r = np.reshape(img_d, (img_d.shape[0]*img_d.shape[1], img_d.shape[2])) #ODO
-    
+
     # fit the k-means algorithm on this reshaped array img_r using the
     # the do_kmeans function defined above.
     clusters = do_kmeans(img_r, n_clusters)
 
-    # reshape this clustered image to the original downsampled image (img_d) width and height 
+    # reshape this clustered image to the original downsampled image (img_d) width and height
     cluster_img = np.reshape(clusters, (a[0], a[1]))
 
     # Upsample the image back to the original image (img) using nearest interpolation
@@ -248,11 +317,14 @@ def cluster_segment(img, n_clusters, random_state=0):
 def to_grayscale(rgb_img):
     return np.dot(rgb_img[... , :3] , [0.299 , 0.587, 0.114])
 
-def segment_image(img): 
+def segment_image(img):
     # ONLY USE ONE SEGMENTATION METHOD
 
     # perform thresholding segmentation
-    binary = threshold_segment_naive(to_grayscale(img), 50, 65).astype(np.uint8)
+    #binary = threshold_segment_naive(to_grayscale(img), 50, 65).astype(np.uint8)
+
+    ### A1 SOCCER ###
+    binary = threshold_segment_naive2(to_grayscale(img), 0,130, 70,220, 100,220).astype(np.uint8)
 
     # perform clustering segmentation.
     #binary = cluster_segment(img, 4).astype(np.uint8)
@@ -260,8 +332,8 @@ def segment_image(img):
     if np.mean(binary) > 0.5:
         binary = 1 - binary #invert the pixels if K-Means assigned 1's to background, and 0's to foreground
 
+    show_image(binary)
     return binary
-
 
 """
 below are tests used for sanity checking you image, edit as you see appropriate
@@ -272,6 +344,12 @@ def test_thresh_naive(img, lower_thresh, upper_thresh):
     thresh = threshold_segment_naive(img, lower_thresh, upper_thresh)
     show_image(thresh, title='thresh naive', grayscale=True)
     cv2.imwrite(IMG_DIR + "/thresh.jpg", thresh.astype('uint8') * 255)
+
+def test_thresh_naive2(img, lt0,ut0,lt1,ut1,lt2,ut2):
+    show_image(img, title='img')
+    thresh2 = threshold_segment_naive2(img, lt0,ut0,lt1,ut1,lt2,ut2)
+    show_image(thresh2, title='thresh naive2')
+    cv2.imwrite(IMG_DIR + "/thresh2.jpg", thresh2.astype('uint8') * 255)
 
 def test_edge_naive(img):
     edges = edge_detect_naive(img)
@@ -297,10 +375,22 @@ if __name__ == '__main__':
     test_img = read_image(IMG_DIR + '/staples.jpg', grayscale=True)
     test_img_color = read_image(IMG_DIR + '/staples.jpg')
 
+    soccer_test_img_color0 = read_image(IMG_DIR + '/soccerball_screenshot0.jpg')
+    soccer_test_img_color1 = read_image(IMG_DIR + '/soccerball_screenshot1.jpg')
+    soccer_test_img_color2 = read_image(IMG_DIR + '/soccerball_screenshot2.jpg')
+    soccer_test_img_color3 = read_image(IMG_DIR + '/soccerball_screenshot3.jpg')
+    soccer_test_img_color4 = read_image(IMG_DIR + '/soccerball_screenshot4.jpg')
+
     # uncomment the test you want to run
     # it will plot the image and also save it
 
-    # test_thresh_naive(test_img, 100, 250)
+    #test_thresh_naive(test_img, 100, 250)
+    test_thresh_naive2(soccer_test_img_color0, 0,130, 70,220, 100,220)
+    test_thresh_naive2(soccer_test_img_color1, 0,130, 70,220, 100,220)
+    test_thresh_naive2(soccer_test_img_color2, 0,130, 70,220, 100,220)
+    test_thresh_naive2(soccer_test_img_color3, 0,130, 70,220, 100,220)
+    test_thresh_naive2(soccer_test_img_color4, 0,130, 70,220, 100,220)
+
     # test_edge_naive(test_img)
     # test_edge_canny(test_img)
-    test_cluster(test_img_color, 6)
+    #test_cluster(test_img_color, 6)
