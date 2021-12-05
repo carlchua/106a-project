@@ -6,7 +6,7 @@ from os import path as os_path
 from pkgutil import extend_path
 from sys import path as sys_path
 
-__extended_path = '/mnt/c/final_project/106a-project/a1_soccer_vision/src/ros_numpy/src'.split(';')
+__extended_path = '/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src/ros_numpy/src'.split(';')
 for p in reversed(__extended_path):
     sys_path.insert(0, p)
     del p

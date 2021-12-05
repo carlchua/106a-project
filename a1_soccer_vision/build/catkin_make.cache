@@ -1,2 +1,2 @@
-ros_numpy:segmentation
--DCATKIN_DEVEL_PREFIX=/mnt/c/final_project/106a-project/a1_soccer_vision/devel -DCMAKE_INSTALL_PREFIX=/mnt/c/final_project/106a-project/a1_soccer_vision/install -G Unix Makefiles
+ar_track_alvar/ar_track_alvar:ar_track_alvar/ar_track_alvar_msgs:lab4_cam:segmentation
+-DCATKIN_DEVEL_PREFIX=/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/devel -DCMAKE_INSTALL_PREFIX=/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/install -G Unix Makefiles

@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/final_project/106a-project/a1_soccer_vision/src/segmentation
+# Install script for directory: /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src/segmentation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/final_project/106a-project/a1_soccer_vision/install")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/catkin_generated/installspace/segmentation.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation/catkin_generated/installspace/segmentation.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/segmentation/cmake" TYPE FILE FILES
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/catkin_generated/installspace/segmentationConfig.cmake"
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/catkin_generated/installspace/segmentationConfig-version.cmake"
+    "/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation/catkin_generated/installspace/segmentationConfig.cmake"
+    "/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation/catkin_generated/installspace/segmentationConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/segmentation" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/src/segmentation/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/segmentation" TYPE FILE FILES "/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src/segmentation/package.xml")
 endif()
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/src
+CMAKE_SOURCE_DIR = /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
+CMAKE_BINARY_DIR = /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build
 
 # Utility rule file for dynamic_reconfigure_generate_messages_py.
 
@@ -63,10 +63,10 @@ segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build: dyna
 .PHONY : segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
 
 segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/cmake_clean.cmake
+	cd /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation && $(CMAKE_COMMAND) -P CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
 
 segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/depend:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/final_project/106a-project/a1_soccer_vision/src /mnt/c/final_project/106a-project/a1_soccer_vision/src/segmentation /mnt/c/final_project/106a-project/a1_soccer_vision/build /mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation /mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src/segmentation /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : segmentation/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/depend
 

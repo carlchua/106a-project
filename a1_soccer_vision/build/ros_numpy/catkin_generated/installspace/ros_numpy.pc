@@ -1,8 +1,0 @@
-prefix=/mnt/c/final_project/106a-project/a1_soccer_vision/install
-
-Name: ros_numpy
-Description: Description of ros_numpy
-Version: 0.0.2
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
