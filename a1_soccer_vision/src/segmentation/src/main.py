@@ -33,8 +33,7 @@ import cv2
 
 from cv_bridge import CvBridge
 
-from image_segmentation import segment_image
-from image_segmentation import show_image_with_point
+from image_segmentation import *
 from pointcloud_segmentation import segment_pointcloud
 
 
@@ -104,7 +103,32 @@ class PointcloudProcess:
     def isolate_object_of_interest(self, points, image, camera_info, trans, rot):
 
         depth = self.latest_depth_im.copy()
-        mask = segment_image(image)
+
+        show_image(image)
+
+        # define the lower and upper boundaries of the "green"
+        # ball in the HSV color space
+        greenLower = (10, 105, 123)
+        greenUpper = (122, 249, 255)
+
+        # # resize the frame, blur it, and convert it to the HSV
+        # color space
+        frame = imutils.resize(image, width=600)
+        blurred = cv2.GaussianBlur(frame, (11, 11), 0)
+        hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
+        # construct a mask for the color "green", then perform
+        # a series of dilations and erosions to remove any small
+        # blobs left in the mask
+        mask = cv2.inRange(hsv, greenLower, greenUpper)
+        show_image(mask, title="orig")
+        mask = cv2.erode(mask, None, iterations=2)
+        show_image(mask, title="erode")
+        mask = cv2.dilate(mask, None, iterations=2)
+        show_image(mask, title="dilate")
+
+        #test_thresh_naive2(image, 0,130, 70,220, 100,220)
+
+        #mask = segment_image(image)
 
         # find contours in the mask and initialize the current
         # (x, y) center of the ball
@@ -112,32 +136,32 @@ class PointcloudProcess:
         cnts = imutils.grab_contours(cnts)
         center = None
 
+        print("length of cnts:", len(cnts))
+        #for c in cnts:
+        # only proceed if at least one contour was found
+        if len(cnts) > 0:
+            # find the largest contour in the mask, then use
+            # it to compute the minimum enclosing circle and
+            # centroid
+            c = max(cnts, key=cv2.contourArea)
+            ((x, y), radius) = cv2.minEnclosingCircle(c)
+            M = cv2.moments(c)
+            center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+            print("Center:", center)
+            ### TODO: use convert_depth_to_phys_coord_using_realsense for the center point
+            x, y = center
 
-        for c in cnts:
-            # only proceed if at least one contour was found
-            if len(c) > 0:
-                # find the largest contour in the mask, then use
-                # it to compute the minimum enclosing circle and
-                # centroid
-                #c = max(cnts, key=cv2.contourArea)
-                ((x, y), radius) = cv2.minEnclosingCircle(c)
-                M = cv2.moments(c)
-                center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-                print("Center:", center)
-                ### TODO: use convert_depth_to_phys_coord_using_realsense for the center point
-                x, y = center
+            show_image_with_point(image, center)
 
-                #show_image_with_point(image, center)
-
-                depth_val = None
-                try:
-                    depth_val = depth[x,y]
-                    center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
-                    #return center_soccer_point_3d
-                except:
-                    print("Center of ball not in frame. Skipping")
-            else:
-                print("No contours found. Skipping")
+            depth_val = None
+            try:
+                depth_val = depth[x,y]
+                center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
+                return center_soccer_point_3d
+            except:
+                print("Center of ball not in frame. Skipping")
+        else:
+            print("No contours found. Skipping")
 
 
         

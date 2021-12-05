@@ -20,6 +20,9 @@ import matplotlib.pyplot as plt
 # import matplotlib
 # matplotlib.use('Agg')
 
+# delete
+import imutils
+
 this_file = os.path.dirname(os.path.abspath(__file__))
 IMG_DIR = '/'.join(this_file.split('/')[:-2]) + '/img'
 
@@ -170,7 +173,7 @@ def threshold_segment_naive2(color_img, lt0, ut0, lt1, ut1, lt2, ut2):
 
     new_img = color_img.copy()
     new_img = cv2.GaussianBlur(new_img, (19, 19), 0)
-    show_image(new_img, title='img_blurred')
+    #show_image(new_img, title='img_blurred')
     img_masked = np.zeros((new_img.shape[0], new_img.shape[1]))
     for i in range(new_img.shape[0]):
         for j in range(new_img.shape[1]):
@@ -324,13 +327,13 @@ def segment_image(img):
     #binary = threshold_segment_naive(to_grayscale(img), 50, 65).astype(np.uint8)
 
     ### A1 SOCCER ###
-    binary = threshold_segment_naive2(to_grayscale(img), 0,130, 70,220, 100,220).astype(np.uint8)
+    binary = threshold_segment_naive2(img, 0,130, 70,220, 100,220).astype(np.uint8)
 
     # perform clustering segmentation.
     #binary = cluster_segment(img, 4).astype(np.uint8)
 
-    if np.mean(binary) > 0.5:
-        binary = 1 - binary #invert the pixels if K-Means assigned 1's to background, and 0's to foreground
+    # if np.mean(binary) > 0.5:
+    #     binary = 1 - binary #invert the pixels if K-Means assigned 1's to background, and 0's to foreground
 
     show_image(binary)
     return binary
@@ -369,6 +372,7 @@ def test_cluster(img, n_clusters):
     cv2.imwrite(IMG_DIR + "/cluster.jpg", clusters)
     clusters = cv2.imread(IMG_DIR + '/cluster.jpg')
     show_image(clusters, title='cluster')
+    
 
 if __name__ == '__main__':
     # adjust the file names here
@@ -380,16 +384,43 @@ if __name__ == '__main__':
     soccer_test_img_color2 = read_image(IMG_DIR + '/soccerball_screenshot2.jpg')
     soccer_test_img_color3 = read_image(IMG_DIR + '/soccerball_screenshot3.jpg')
     soccer_test_img_color4 = read_image(IMG_DIR + '/soccerball_screenshot4.jpg')
+    soccer_test = read_image(IMG_DIR + '/updated_bag_test_img.jpg')
+
+
+    show_image(soccer_test)
+    # define the lower and upper boundaries of the "green"
+    # ball in the HSV color space
+    # greenLower = (90, 255, 143)
+    # greenUpper = (88, 123, 228)
+
+    greenLower = (29, 86, 6)
+    greenUpper = (64, 255, 255)
+
+    # resize the frame, blur it, and convert it to the HSV
+    # color space
+    frame = imutils.resize(soccer_test, width=600)
+    blurred = cv2.GaussianBlur(frame, (11, 11), 0)
+    hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
+    # construct a mask for the color "green", then perform
+    # a series of dilations and erosions to remove any small
+    # blobs left in the mask
+    mask = cv2.inRange(hsv, greenLower, greenUpper)
+    show_image(mask, title="orig")
+    mask = cv2.erode(mask, None, iterations=2)
+    show_image(mask, title="erode")
+    mask = cv2.dilate(mask, None, iterations=2)
+    show_image(mask, title="dilate")
+
 
     # uncomment the test you want to run
     # it will plot the image and also save it
 
     #test_thresh_naive(test_img, 100, 250)
-    test_thresh_naive2(soccer_test_img_color0, 0,130, 70,220, 100,220)
-    test_thresh_naive2(soccer_test_img_color1, 0,130, 70,220, 100,220)
-    test_thresh_naive2(soccer_test_img_color2, 0,130, 70,220, 100,220)
-    test_thresh_naive2(soccer_test_img_color3, 0,130, 70,220, 100,220)
-    test_thresh_naive2(soccer_test_img_color4, 0,130, 70,220, 100,220)
+    #binary = test_thresh_naive2(soccer_test, 0,130, 70,220, 100,220)
+    # test_thresh_naive2(soccer_test_img_color1, 0,130, 70,220, 100,220)
+    # test_thresh_naive2(soccer_test_img_color2, 0,130, 70,220, 100,220)
+    # test_thresh_naive2(soccer_test_img_color3, 0,130, 70,220, 100,220)
+    # test_thresh_naive2(soccer_test_img_color4, 0,130, 70,220, 100,220)
 
     # test_edge_naive(test_img)
     # test_edge_canny(test_img)
