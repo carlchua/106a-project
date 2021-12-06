@@ -70,7 +70,62 @@ def trajectory(data):
         else:
             break
 
+def interpolate_traj(data):
+
+
 if __name__ == '__main__':
     f = open('results.json', 'r')
     data = json.load(f)
     trajectory(data)
+
+    base_poses = data['base_poses']
+    FR_states = data['FR_states']
+    FL_states = data['FL_states']
+    RR_states = data['RR_states']
+    RL_states = data['RL_states']
+    time_span = data['time_span']
+    total_grid = data['total_grid']
+    
+    desired_freq = 50 # 50Hz
+    node_num = round(time_span*desired_freq)
+    time_data = np.linspace(0, time_span, total_grid)
+    time_new = np.linspace(0, time_span, node_num)
+
+    # Define interpolation functions
+    fr_1 = interpolate.interp1d(time_data, FR_states[0, :])
+    fr_2 = interpolate.interp1d(time_data, FR_states[1, :])
+    fr_3 = interpolate.interp1d(time_data, FR_states[2, :])
+
+    fl_1 = interpolate.interp1d(time_data, FL_states[0, :])
+    fl_2 = interpolate.interp1d(time_data, FL_states[1, :])
+    fl_3 = interpolate.interp1d(time_data, FL_states[2, :])
+
+    rr_1 = interpolate.interp1d(time_data, RR_states[0, :])
+    rr_2 = interpolate.interp1d(time_data, RR_states[1, :])
+    rr_3 = interpolate.interp1d(time_data, RR_states[2, :])
+
+    rl_1 = interpolate.interp1d(time_data, RL_states[0, :])
+    rl_2 = interpolate.interp1d(time_data, RL_states[1, :])
+    rl_3 = interpolate.interp1d(time_data, RL_states[2, :])
+
+    # Interpolate desired states to signal frequency
+    fr_1_cmd = fr_1(time_new)
+    fr_2_cmd = fr_2(time_new)
+    fr_3_cmd = fr_3(time_new)
+
+    fl_1_cmd = fl_1(time_new)
+    fl_2_cmd = fl_2(time_new)
+    fl_3_cmd = fl_3(time_new)
+
+    rr_1_cmd = rr_1(time_new)
+    rr_2_cmd = rr_2(time_new)
+    rr_3_cmd = rr_3(time_new)
+
+    rl_1_cmd = rl_1(time_new)
+    rl_2_cmd = rl_2(time_new)
+    rl_3_cmd = rl_3(time_new)
+
+    joint_state_commands = np.vstack((fr_1_cmd, fr_2_cmd, fr_3_cmd, fl_1_cmd, fl_2_cmd, fl_3_cmd, rr_1_cmd, rr_2_cmd, rr_3_cmd, rl_1_cmd, rl_2_cmd, rl_3_cmd))
+
+
+
