@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/src
+CMAKE_SOURCE_DIR = /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
+CMAKE_BINARY_DIR = /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build
 
 # Utility rule file for roscpp_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/build: roscpp_generate_
 .PHONY : segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/build
 
 segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation && $(CMAKE_COMMAND) -P CMakeFiles/roscpp_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 
 segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/depend:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/final_project/106a-project/a1_soccer_vision/src /mnt/c/final_project/106a-project/a1_soccer_vision/src/segmentation /mnt/c/final_project/106a-project/a1_soccer_vision/build /mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation /mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/src/segmentation /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation /mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/build/segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : segmentation/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
 
