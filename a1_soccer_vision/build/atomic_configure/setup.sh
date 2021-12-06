@@ -11,7 +11,7 @@
 
 # since this file is sourced either use the provided _CATKIN_SETUP_DIR
 # or fall back to the destination set at configure time
-: ${_CATKIN_SETUP_DIR:=/mnt/c/bioe106a/bioe106a_final_project/106a-project/a1_soccer_vision/devel}
+: ${_CATKIN_SETUP_DIR:=/mnt/c/final_project/106a-project/a1_soccer_vision/devel}
 _SETUP_UTIL="$_CATKIN_SETUP_DIR/_setup_util.py"
 unset _CATKIN_SETUP_DIR
 

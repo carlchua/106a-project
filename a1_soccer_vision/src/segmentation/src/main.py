@@ -156,7 +156,7 @@ class PointcloudProcess:
             # find the largest contour in the mask, then use
             # it to compute the minimum enclosing circle and
             # centroid
-            c = max(cnts, key=cv2.contourArea)
+            contour = max(cnts, key=cv2.contourArea)
 
             #filter contours that have area > 0.6*Area of max contour
             #filt_cnts = [cnt for cnt in contours if cv.contourArea(cnt)>0.6*cv.contourArea(outer_cnt)]
@@ -164,9 +164,9 @@ class PointcloudProcess:
             # if not min_radius_circle < radius < max_radius_circle:
             #   continue
 
-            ((x, y), radius) = cv2.minEnclosingCircle(c)
+            ((x, y), radius) = cv2.minEnclosingCircle(contour)
             if radius > 10:
-                M = cv2.moments(c)
+                M = cv2.moments(contour)
                 center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
                 print("Center:", center)
                 x, y = center
@@ -178,7 +178,7 @@ class PointcloudProcess:
                     depth_val = depth[x,y]
                     center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
                     print(center_soccer_point_3d)
-                    return center_soccer_point_3d
+                    return center_soccer_point_3d, contour
                 except:
                     print("Center of ball not in frame. Skipping")
             else:
@@ -225,7 +225,7 @@ class PointcloudProcess:
                 return
 
             ### A1 SOCCER ###
-            center_soccer_point = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
+            center_soccer_point, contour = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
             self.max_center_point = center_soccer_point
             
             ### TODO: save the largest contour and associated 3d point. Only update when a larger one has been found! Continuously publish this point###
@@ -236,7 +236,7 @@ class PointcloudProcess:
 
             # pointmsg = point_to_pointmsg(self.max_center_point)
             # self.points_pub.publish(pointmsg)
-            print("Publishing soccer point:", self.max_center_point)
+            print("Publishing soccer point:", self.max_center_point, contour)
 
 def main():
     CAM_INFO_TOPIC = '/camera/aligned_depth_to_color/camera_info' #'/camera/color/camera_info'
