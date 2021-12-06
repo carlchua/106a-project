@@ -29,8 +29,6 @@ def trajectory(data):
     if not started:
         rospy.init_node('cmd_publisher')
 
-    self.mpos_interp_func =  interpolate.interp1d(np.linspace(0, data['time_span'], data['total_grid']).flatten(), self.ref_motion['Motor_Pos'].T, kind='linear', axis=-1)
-
     index = 0
 
     motor_cmds = [MotorCmd() for _ in range(12)]
@@ -54,11 +52,13 @@ def trajectory(data):
         motor_cmds[i*3+2].Kd = 1 # 15
         motor_cmds[i*3+2].tau = 0
 
+        rate = rospy.Rate(desired_freq)
+
     while not rospy.is_shutdown():
         target = []
 
         for i in range(12):
-            motor_cmds[i].q = states[i][index]
+            motor_cmds[i].q = joint_state_commands[i][index]
 
         for i in range(12):
             pubs[i].publish(motor_cmds[i])
@@ -70,14 +70,14 @@ def trajectory(data):
         else:
             break
 
+
 def interpolate_traj(data):
 
 
 if __name__ == '__main__':
     f = open('results.json', 'r')
     data = json.load(f)
-    trajectory(data)
-
+    
     base_poses = data['base_poses']
     FR_states = data['FR_states']
     FL_states = data['FL_states']
@@ -85,7 +85,7 @@ if __name__ == '__main__':
     RL_states = data['RL_states']
     time_span = data['time_span']
     total_grid = data['total_grid']
-    
+
     desired_freq = 50 # 50Hz
     node_num = round(time_span*desired_freq)
     time_data = np.linspace(0, time_span, total_grid)
@@ -127,5 +127,7 @@ if __name__ == '__main__':
 
     joint_state_commands = np.vstack((fr_1_cmd, fr_2_cmd, fr_3_cmd, fl_1_cmd, fl_2_cmd, fl_3_cmd, rr_1_cmd, rr_2_cmd, rr_3_cmd, rl_1_cmd, rl_2_cmd, rl_3_cmd))
 
-
-
+    try:
+        trajectory(data)
+    except rospy.ROSInterruptionException:
+        pass
