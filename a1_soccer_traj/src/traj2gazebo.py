@@ -14,7 +14,7 @@ def trajectory():
 
     while not rospy.is_shutdown():
         pub.publish(motorcmd_msg)
+        self.mpos_interp_func =  interpolate.interp1d(self.ref_motion['Time'].flatten(), self.ref_motion['Motor_Pos'].T, kind='linear', axis=-1)
         rate.sleep()
 
 def interpolateForGazebo(dataDict):
-    

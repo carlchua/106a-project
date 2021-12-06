@@ -514,14 +514,15 @@ if __name__ == "__main__":
 	resultsjson['FL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.FL_states).tolist()
 	resultsjson['RR_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RR_states).tolist()
 	resultsjson['RL_states'] = a1_kin_opti.opti.debug.value(a1_kin_opti.RL_states).tolist()
+	resultsjson['time_span'] = a1_kin_opti.opti.debug.value(a1_kin_opti.time_span)
 
 	results['time_span'] = a1_kin_opti.opti.debug.value(a1_kin_opti.time_span)
 	results['total_grid'] = a1_kin_opti.total_grid
-	f = open('test_interp.p', 'w')
-
-	# either one
-	pickle.dump(results, f)
-	f.close()
+	# f = open('test_interp.p', 'w')
+	#
+	# # either one
+	# pickle.dump(results, f)
+	# f.close()
 	with open('results.json', 'w') as fp:
 		json.dump(resultsjson, fp)
 	get_motor_i(results, 0)
