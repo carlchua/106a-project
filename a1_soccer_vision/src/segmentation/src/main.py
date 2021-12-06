@@ -25,6 +25,7 @@ import pyrealsense2 as rs2
 import cv2
 import imutils
 import matplotlib.pyplot as plt
+from geometry_msgs.msg import Point
 
 from sensor_msgs.msg import Image, CameraInfo, PointCloud2
 
@@ -66,6 +67,14 @@ def numpy_to_pc2_msg(points):
     return ros_numpy.msgify(PointCloud2, points, stamp=rospy.Time.now(),
         frame_id='camera_depth_optical_frame')
 
+def point_to_pointmsg(point):
+    ros_point = Point()
+    ros_point.x = point[0]
+    ros_point.y = point[1]
+    ros_point.z = point[2]
+    return ros_point 
+
+
 class PointcloudProcess:
     """
     Wraps the processing of a pointcloud from an input ros topic and publishing
@@ -91,8 +100,10 @@ class PointcloudProcess:
         self.cv_bridge = CvBridge()
         self.latest_depth_im = None
         self.listener = tf.TransformListener()
+        self.max_center_point = None
+        self.max_contour_area = None
         
-        self.points_pub = rospy.Publisher(points_pub_topic, PointCloud2, queue_size=10)
+        self.points_pub = rospy.Publisher(points_pub_topic, Point, queue_size=10)
         self.image_pub = rospy.Publisher('segmented_image', Image, queue_size=10)
         
         ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, caminfo_sub],
@@ -110,6 +121,8 @@ class PointcloudProcess:
         # ball in the HSV color space
         greenLower = (10, 105, 123)
         greenUpper = (122, 249, 255)
+        # greenLower = (29, 86, 6)
+        # greenUpper = (64, 255, 255)
 
         # # resize the frame, blur it, and convert it to the HSV
         # color space
@@ -120,11 +133,11 @@ class PointcloudProcess:
         # a series of dilations and erosions to remove any small
         # blobs left in the mask
         mask = cv2.inRange(hsv, greenLower, greenUpper)
-        show_image(mask, title="orig")
+        #show_image(mask, title="orig")
         mask = cv2.erode(mask, None, iterations=2)
-        show_image(mask, title="erode")
+        #show_image(mask, title="erode")
         mask = cv2.dilate(mask, None, iterations=2)
-        show_image(mask, title="dilate")
+        #show_image(mask, title="dilate")
 
         #test_thresh_naive2(image, 0,130, 70,220, 100,220)
 
@@ -144,27 +157,36 @@ class PointcloudProcess:
             # it to compute the minimum enclosing circle and
             # centroid
             c = max(cnts, key=cv2.contourArea)
+
+            #filter contours that have area > 0.6*Area of max contour
+            #filt_cnts = [cnt for cnt in contours if cv.contourArea(cnt)>0.6*cv.contourArea(outer_cnt)]
+
+            # if not min_radius_circle < radius < max_radius_circle:
+            #   continue
+
             ((x, y), radius) = cv2.minEnclosingCircle(c)
-            M = cv2.moments(c)
-            center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
-            print("Center:", center)
-            ### TODO: use convert_depth_to_phys_coord_using_realsense for the center point
-            x, y = center
+            if radius > 10:
+                M = cv2.moments(c)
+                center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
+                print("Center:", center)
+                x, y = center
 
-            show_image_with_point(image, center)
+                show_image_with_point(image, center)
 
-            depth_val = None
-            try:
-                depth_val = depth[x,y]
-                center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
-                return center_soccer_point_3d
-            except:
-                print("Center of ball not in frame. Skipping")
+                depth_val = None
+                try:
+                    depth_val = depth[x,y]
+                    center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
+                    print(center_soccer_point_3d)
+                    return center_soccer_point_3d
+                except:
+                    print("Center of ball not in frame. Skipping")
+            else:
+                print("Contour found is too small. Skipping")
         else:
             print("No contours found. Skipping")
 
-
-        
+        return None
 
         ### Old code
             # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
@@ -204,13 +226,17 @@ class PointcloudProcess:
 
             ### A1 SOCCER ###
             center_soccer_point = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
+            self.max_center_point = center_soccer_point
+            
+            ### TODO: save the largest contour and associated 3d point. Only update when a larger one has been found! Continuously publish this point###
 
-            #points_msg = numpy_to_pc2_msg(points)
-            #self.points_pub.publish(points_msg)
-            #print("Published segmented pointcloud at timestamp:",
-            #       points_msg.header.stamp.secs)
-            print("Publishing soccer point:", center_soccer_point)
-            #"at timestamp:", points_msg.header.stamp.secs)
+            #self.max_center_point = center_soccer_point if center_soccer_point > self.max_center_point else self.max_center_point
+
+            # TODO: Modify center point given ARTag x location
+
+            # pointmsg = point_to_pointmsg(self.max_center_point)
+            # self.points_pub.publish(pointmsg)
+            print("Publishing soccer point:", self.max_center_point)
 
 def main():
     CAM_INFO_TOPIC = '/camera/aligned_depth_to_color/camera_info' #'/camera/color/camera_info'
