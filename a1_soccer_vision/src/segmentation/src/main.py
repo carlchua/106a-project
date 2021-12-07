@@ -25,7 +25,7 @@ import pyrealsense2 as rs2
 import cv2
 import imutils
 import matplotlib.pyplot as plt
-from geometry_msgs.msg import Point
+from geometry_msgs.msg import Point, PointStamped
 
 from sensor_msgs.msg import Image, CameraInfo, PointCloud2
 
@@ -67,12 +67,23 @@ def numpy_to_pc2_msg(points):
     return ros_numpy.msgify(PointCloud2, points, stamp=rospy.Time.now(),
         frame_id='camera_depth_optical_frame')
 
-def point_to_pointmsg(point):
+def point_to_point_msg(point):
     ros_point = Point()
     ros_point.x = point[0]
     ros_point.y = point[1]
     ros_point.z = point[2]
     return ros_point 
+
+def point_to_pointstamped_msg(point):
+    pt = PointStamped()
+    pt.header.stamp = rospy.Time.now()
+    pt.header.frame_id = "camera_aligned_depth_to_color_frame"
+    pt.point.x = point[0]
+    pt.point.y = point[1]
+    pt.point.z = point[2]
+    return pt 
+
+
 
 
 class PointcloudProcess:
@@ -100,10 +111,11 @@ class PointcloudProcess:
         self.cv_bridge = CvBridge()
         self.latest_depth_im = None
         self.listener = tf.TransformListener()
-        self.max_center_point = None
-        self.max_contour_area = None
+        self.max_center_point_3d = (0,0,0)
+        self.max_center_point_2d = (0,0)
+        self.max_contour_area = 0
         
-        self.points_pub = rospy.Publisher(points_pub_topic, Point, queue_size=10)
+        self.points_pub = rospy.Publisher(points_pub_topic, PointStamped, queue_size=10)
         self.image_pub = rospy.Publisher('segmented_image', Image, queue_size=10)
         
         ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, caminfo_sub],
@@ -115,12 +127,14 @@ class PointcloudProcess:
 
         depth = self.latest_depth_im.copy()
 
-        show_image(image)
+        #show_image(image)
 
         # define the lower and upper boundaries of the "green"
         # ball in the HSV color space
         greenLower = (10, 105, 123)
         greenUpper = (122, 249, 255)
+
+        # Orig:
         # greenLower = (29, 86, 6)
         # greenUpper = (64, 255, 255)
 
@@ -178,7 +192,7 @@ class PointcloudProcess:
                     depth_val = depth[x,y]
                     center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
                     print(center_soccer_point_3d)
-                    return center_soccer_point_3d, contour
+                    return center_soccer_point_3d, cv2.contourArea(contour), center
                 except:
                     print("Center of ball not in frame. Skipping")
             else:
@@ -186,7 +200,7 @@ class PointcloudProcess:
         else:
             print("No contours found. Skipping")
 
-        return None
+        return None, None, None
 
         ### Old code
             # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
@@ -225,8 +239,11 @@ class PointcloudProcess:
                 return
 
             ### A1 SOCCER ###
-            center_soccer_point, contour = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
-            self.max_center_point = center_soccer_point
+            center_soccer_point_3d, contourArea, center_soccer_point_2d = self.isolate_object_of_interest(points, image, info, np.array(trans), np.array(rot))
+            if (contourArea > self.max_contour_area):
+                self.max_contour_area = contourArea
+                self.max_center_point_3d = center_soccer_point_3d
+                self.max_center_point_2d = center_soccer_point_2d
             
             ### TODO: save the largest contour and associated 3d point. Only update when a larger one has been found! Continuously publish this point###
 
@@ -234,9 +251,10 @@ class PointcloudProcess:
 
             # TODO: Modify center point given ARTag x location
 
-            # pointmsg = point_to_pointmsg(self.max_center_point)
-            # self.points_pub.publish(pointmsg)
-            print("Publishing soccer point:", self.max_center_point, contour)
+            #pointmsg = point_to_pointmsg(self.max_center_point)
+            pointmsg = point_to_pointstamped_msg(self.max_center_point_3d)
+            self.points_pub.publish(pointmsg)
+            print("Publishing soccer point:", self.max_center_point_3d, self.max_contour_area, self.max_center_point_2d)
 
 def main():
     CAM_INFO_TOPIC = '/camera/aligned_depth_to_color/camera_info' #'/camera/color/camera_info'
