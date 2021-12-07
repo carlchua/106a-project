@@ -1,0 +1,8 @@
+prefix=/mnt/c/final_project/106a-project/a1_soccer_vision/install
+
+Name: segmentation
+Description: Description of segmentation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
