@@ -77,7 +77,7 @@ def interpolate_traj(data):
 if __name__ == '__main__':
     f = open('results.json', 'r')
     data = json.load(f)
-    
+
     base_poses = data['base_poses']
     FR_states = data['FR_states']
     FL_states = data['FL_states']
@@ -92,6 +92,7 @@ if __name__ == '__main__':
     time_new = np.linspace(0, time_span, node_num)
 
     # Define interpolation functions
+    fr = interpolate.interp1d(time_data, FR_states.T, kind='linear', axis=-1) #time_data = 1xtime, FR states joint num x time
     fr_1 = interpolate.interp1d(time_data, FR_states[0, :])
     fr_2 = interpolate.interp1d(time_data, FR_states[1, :])
     fr_3 = interpolate.interp1d(time_data, FR_states[2, :])
@@ -109,6 +110,7 @@ if __name__ == '__main__':
     rl_3 = interpolate.interp1d(time_data, RL_states[2, :])
 
     # Interpolate desired states to signal frequency
+    fr_cmd = fr(time_new)
     fr_1_cmd = fr_1(time_new)
     fr_2_cmd = fr_2(time_new)
     fr_3_cmd = fr_3(time_new)
