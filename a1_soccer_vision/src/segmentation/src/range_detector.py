@@ -93,7 +93,7 @@ def main():
     if args['image']:
         image = cv2.imread(args['image'])
 
-        image = read_image(IMG_DIR + '/soccerball_screenshot_good.jpg')
+        image = read_image(IMG_DIR + '/soccerball_screenshot_1.jpg')
 
         if range_filter == 'RGB':
             frame_to_thresh = image.copy()

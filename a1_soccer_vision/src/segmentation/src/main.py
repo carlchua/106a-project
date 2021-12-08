@@ -142,6 +142,10 @@ class PointcloudProcess:
         greenLower = (10, 105, 123)
         greenUpper = (122, 249, 255)
 
+        #try:
+        # greenLower = (10, 86, 107)
+        # greenUpper = (136, 240, 255)
+
         # Orig:
         # greenLower = (29, 86, 6)
         # greenUpper = (64, 255, 255)
@@ -159,7 +163,7 @@ class PointcloudProcess:
         mask = cv2.erode(mask, None, iterations=2)
         #show_image(mask, title="erode")
         mask = cv2.dilate(mask, None, iterations=2)
-        #show_image(mask, title="dilate")
+        show_image(mask, title="dilate")
 
         #test_thresh_naive2(image, 0,130, 70,220, 100,220)
 
