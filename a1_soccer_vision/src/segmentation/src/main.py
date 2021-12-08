@@ -122,6 +122,7 @@ class PointcloudProcess:
         self.max_center_point_3d = (0,0,0)
         self.max_center_point_2d = (0,0)
         self.max_contour_area = 0
+        self.ball_radius = 9 # In cm
 
         self.points_pub = rospy.Publisher(points_pub_topic, PointStamped, queue_size=10)
         self.image_pub = rospy.Publisher('segmented_image', Image, queue_size=10)
@@ -136,14 +137,48 @@ class PointcloudProcess:
 
     def __ar_cb(self, msg):
         #print('I have recieved msg:{}'.format(msg))
-        if msg.markers:
-            #print('I have received y point:', msg.markers[0].pose.pose.position.y)
-            unconverted_position = msg.markers[0].pose.pose.position
-            print('ar tag unconverted position:', unconverted_position)
-            x = unconverted_position.x
-            y = -1 * unconverted_position.y + 0.03151531
-            print('y converted position:', y)
-            z = unconverted_position.z
+        if len(msg.markers) == 2:
+            #unconverted_position = msg.markers[0].pose.pose.position
+            #print('ar tag unconverted position:', unconverted_position)
+            if (msg.markers[0].id == 0):
+                ball_marker = msg.markers[0]
+                goal_marker = msg.markers[1]
+            else:
+                ball_marker = msg.markers[1]
+                goal_marker = msg.markers[0]
+            
+            ball_position = ball_marker.pose.pose.position
+            goal_position = goal_marker.pose.pose.position
+
+            diff_x = goal_position.x - ball_position.x
+            diff_y = goal_position.y - ball_position.y
+
+            theta = np.arctan(diff_y/(diff_x - self.ball_radius))
+            p = (self.ball_radius - self.ball_radius*np.cos(theta), -1*self.ball_radius*np.sin(theta))
+
+            p_relative_to_camera = (p[0] + ball_position.x, p[1] + ball_position.y, ball_position.z)
+
+            tf_base_to_camera = (0.21480518, 0.03151531, 0.04236627)
+
+            p_relative_to_base = (tf_base_to_camera[0] + p_relative_to_camera[0],
+                tf_base_to_camera[1] + p_relative_to_camera[1],
+                tf_base_to_camera[2] + p_relative_to_camera[2])
+
+            print('kicking point:', p_relative_to_camera)
+            #p_relative_to_camera = (0.21811920495134257, 0.13110996873876438, -0.011103773408655244)
+            pointmsg = point_to_pointstamped_msg(p_relative_to_camera)
+            self.points_pub.publish(pointmsg)
+            #return p_relative_to_camera
+
+
+        # if msg.markers:
+        #     #print('I have received y point:', msg.markers[0].pose.pose.position.y)
+        #     unconverted_position = msg.markers[0].pose.pose.position
+        #     #print('ar tag unconverted position:', unconverted_position)
+        #     x = unconverted_position.x
+        #     y = -1 * unconverted_position.y + 0.03151531
+        #     #print('y converted position:', y)
+        #     z = unconverted_position.z
 
     def isolate_object_of_interest(self, points, image, camera_info, trans, rot):
 
@@ -177,7 +212,7 @@ class PointcloudProcess:
         mask = cv2.erode(mask, None, iterations=2)
         #show_image(mask, title="erode")
         mask = cv2.dilate(mask, None, iterations=2)
-        show_image(mask, title="dilate")
+        #show_image(mask, title="dilate")
 
         #test_thresh_naive2(image, 0,130, 70,220, 100,220)
 
@@ -215,7 +250,7 @@ class PointcloudProcess:
 
                 depth_val = None
                 try:
-                    depth_val = depth[y,x]
+                    depth_val = depth[y,x] #200
                     print("Depth_val:", depth_val)
                     # The 3D coordinates (float[3]). The coordinate system is also defined here.
                     # If you want to use these values in rviz, you need to change the coordinate.
@@ -281,9 +316,9 @@ class PointcloudProcess:
             # TODO: Modify center point given ARTag x location
 
             #pointmsg = point_to_pointmsg(self.max_center_point)
-            pointmsg = point_to_pointstamped_msg(self.max_center_point_3d)
-            self.points_pub.publish(pointmsg)
-            print("Publishing soccer point:", self.max_center_point_3d, self.max_contour_area, self.max_center_point_2d)
+            #pointmsg = point_to_pointstamped_msg(self.max_center_point_3d)
+            #self.points_pub.publish(pointmsg)
+            #print("Publishing soccer point:", self.max_center_point_3d, self.max_contour_area, self.max_center_point_2d)
 
 def main():
     CAM_INFO_TOPIC = '/camera/aligned_depth_to_color/camera_info' #'/camera/color/camera_info'
@@ -294,7 +329,7 @@ def main():
     POINTS_TOPIC = '/camera/depth/color/points'
     AR_TAG_POSE_TOPIC = '/ar_pose_marker'
     POINTS_PUB_TOPIC = 'segmented_points'
-    AR_TAG_Y_PUB_TOPIC = 'ar_tag_y'
+    AR_TAG_PUB_TOPIC = 'ar_tag_y'
 
     rospy.init_node('realsense_listener')
     process = PointcloudProcess(POINTS_TOPIC, RGB_IMAGE_TOPIC, DEPTH_IMAGE_TOPIC,
