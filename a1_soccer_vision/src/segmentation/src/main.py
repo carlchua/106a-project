@@ -78,7 +78,7 @@ def point_to_point_msg(point):
     ros_point.x = point[0]
     ros_point.y = point[1]
     ros_point.z = point[2]
-    return ros_point 
+    return ros_point
 
 def point_to_pointstamped_msg(point):
     pt = PointStamped()
@@ -87,7 +87,7 @@ def point_to_pointstamped_msg(point):
     pt.point.x = point[0]
     pt.point.y = point[1]
     pt.point.z = point[2]
-    return pt 
+    return pt
 
 
 
@@ -98,7 +98,7 @@ class PointcloudProcess:
     to another PointCloud2 topic.
 
     """
-    def __init__(self, points_sub_topic, 
+    def __init__(self, points_sub_topic,
                        image_sub_topic,
                        depth_sub_topic,
                        cam_info_topic,
@@ -113,7 +113,7 @@ class PointcloudProcess:
         image_sub = message_filters.Subscriber(image_sub_topic, Image)
         depth_sub = message_filters.Subscriber(depth_sub_topic, Image)
         caminfo_sub = message_filters.Subscriber(cam_info_topic, CameraInfo)
-        ar_tag_pose_sub = message_filters.Subscriber(ar_tag_pose_topic, AlvarMarkers)
+        # ar_tag_pose_sub = message_filters.Subscriber(ar_tag_pose_topic, AlvarMarkers)
 
         #A1 Soccer
         self.cv_bridge = CvBridge()
@@ -122,14 +122,20 @@ class PointcloudProcess:
         self.max_center_point_3d = (0,0,0)
         self.max_center_point_2d = (0,0)
         self.max_contour_area = 0
-        
+
         self.points_pub = rospy.Publisher(points_pub_topic, PointStamped, queue_size=10)
         self.image_pub = rospy.Publisher('segmented_image', Image, queue_size=10)
-        
-        ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, ar_tag_pose_sub, caminfo_sub],
+        self.ar_sub = rospy.Subscriber('/ar_pose_marker', AlvarMarkers, self.__ar_cb, queue_size=100)
+        print("sub init")
+        # ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, ar_tag_pose_sub, caminfo_sub],
+        #                                                   10, 1, allow_headerless=True)
+        ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, caminfo_sub],
                                                           10, 1, allow_headerless=True)
 
         ts.registerCallback(self.callback)
+
+    def __ar_cb(self, msg):
+        print('I have recieved msg:{}'.format(msg))
 
     def isolate_object_of_interest(self, points, image, camera_info, trans, rot):
 
@@ -199,7 +205,7 @@ class PointcloudProcess:
                 try:
                     depth_val = depth[y,x]
                     print("Depth_val:", depth_val)
-                    # The 3D coordinates (float[3]). The coordinate system is also defined here. 
+                    # The 3D coordinates (float[3]). The coordinate system is also defined here.
                     # If you want to use these values in rviz, you need to change the coordinate.
                     center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
                     print(center_soccer_point_3d)
@@ -216,8 +222,8 @@ class PointcloudProcess:
         ### Old code
             # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
             # return points
-    
-    def callback(self, points_msg, image, depth, info): #ar_tag 
+
+    def callback(self, points_msg, image, depth, info): #ar_tag
         try:
             intrinsic_matrix = get_camera_matrix(info)
             intrinsic_matrix = info
@@ -245,7 +251,7 @@ class PointcloudProcess:
                                                        rospy.Time(0))
                 rot = tf.transformations.quaternion_matrix(rot)[:3, :3]
             except (tf.LookupException,
-                    tf.ConnectivityException, 
+                    tf.ConnectivityException,
                     tf.ExtrapolationException):
                 return
 
@@ -255,7 +261,7 @@ class PointcloudProcess:
                 self.max_contour_area = contourArea
                 self.max_center_point_3d = center_soccer_point_3d
                 self.max_center_point_2d = center_soccer_point_2d
-            
+
             ### TODO: save the largest contour and associated 3d point. Only update when a larger one has been found! Continuously publish this point###
 
             #self.max_center_point = center_soccer_point if center_soccer_point > self.max_center_point else self.max_center_point
