@@ -135,7 +135,15 @@ class PointcloudProcess:
         ts.registerCallback(self.callback)
 
     def __ar_cb(self, msg):
-        print('I have recieved msg:{}'.format(msg))
+        #print('I have recieved msg:{}'.format(msg))
+        if msg.markers:
+            #print('I have received y point:', msg.markers[0].pose.pose.position.y)
+            unconverted_position = msg.markers[0].pose.pose.position
+            print('ar tag unconverted position:', unconverted_position)
+            x = unconverted_position.x
+            y = -1 * unconverted_position.y + 0.03151531
+            print('y converted position:', y)
+            z = unconverted_position.z
 
     def isolate_object_of_interest(self, points, image, camera_info, trans, rot):
 
@@ -282,6 +290,7 @@ def main():
     POINTS_TOPIC = '/camera/depth/color/points'
     AR_TAG_POSE_TOPIC = '/ar_pose_marker'
     POINTS_PUB_TOPIC = 'segmented_points'
+    AR_TAG_Y_PUB_TOPIC = 'ar_tag_y'
 
     rospy.init_node('realsense_listener')
     process = PointcloudProcess(POINTS_TOPIC, RGB_IMAGE_TOPIC, DEPTH_IMAGE_TOPIC,
