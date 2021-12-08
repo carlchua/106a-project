@@ -423,21 +423,6 @@ run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_so
 .PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule
-
-# Convenience name for target.
-clean_test_results_ar_track_alvar: ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule
-
-.PHONY : clean_test_results_ar_track_alvar
-
-# fast build rule for target.
-clean_test_results_ar_track_alvar/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/build
-.PHONY : clean_test_results_ar_track_alvar/fast
-
-# Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/rule:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/rule
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/rule
@@ -466,6 +451,36 @@ run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_so
 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build
 .PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule
+
+# Convenience name for target.
+clean_test_results_ar_track_alvar: ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/rule
+
+.PHONY : clean_test_results_ar_track_alvar
+
+# fast build rule for target.
+clean_test_results_ar_track_alvar/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/build
+.PHONY : clean_test_results_ar_track_alvar/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule
+
+# Convenience name for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch: ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule
+
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check.dir/rule:
@@ -513,34 +528,94 @@ _run_tests_ar_track_alvar/fast:
 .PHONY : _run_tests_ar_track_alvar/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
 # Convenience name for target.
-createMarker: ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule
+dynamic_reconfigure_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
 
-.PHONY : createMarker
+.PHONY : dynamic_reconfigure_generate_messages_py
 
 # fast build rule for target.
-createMarker/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/build
-.PHONY : createMarker/fast
+dynamic_reconfigure_generate_messages_py/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-trainMarkerBundle: ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule
+dynamic_reconfigure_generate_messages_eus: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
 
-.PHONY : trainMarkerBundle
+.PHONY : dynamic_reconfigure_generate_messages_eus
 
 # fast build rule for target.
-trainMarkerBundle/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/build
-.PHONY : trainMarkerBundle/fast
+dynamic_reconfigure_generate_messages_eus/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_eus/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
+
+# Convenience name for target.
+run_tests_ar_track_alvar: ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
+
+.PHONY : run_tests_ar_track_alvar
+
+# fast build rule for target.
+run_tests_ar_track_alvar/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/build
+.PHONY : run_tests_ar_track_alvar/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+rosgraph_msgs_generate_messages_cpp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule
+
+# Convenience name for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch: ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule
+
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+
+.PHONY : topic_tools_generate_messages_cpp
+
+# fast build rule for target.
+topic_tools_generate_messages_cpp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+.PHONY : topic_tools_generate_messages_cpp/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_ros_gencfg.dir/rule:
@@ -601,36 +676,6 @@ tf2_msgs_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs
 tf2_msgs_generate_messages_py/fast:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
 .PHONY : tf2_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule
-
-# Convenience name for target.
-individualMarkersNoKinect: ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule
-
-.PHONY : individualMarkersNoKinect
-
-# fast build rule for target.
-individualMarkersNoKinect/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/build
-.PHONY : individualMarkersNoKinect/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_cpp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_msgs_generate_messages_py.dir/rule:
@@ -753,66 +798,6 @@ std_srvs_generate_messages_nodejs/fast:
 .PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-sensor_msgs_generate_messages_nodejs/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-.PHONY : sensor_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-.PHONY : sensor_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_rostest.dir/rule:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_rostest.dir/rule
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_rostest.dir/rule
@@ -858,94 +843,94 @@ roscpp_generate_messages_nodejs/fast:
 .PHONY : roscpp_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-run_tests_ar_track_alvar: ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/rule
+dynamic_reconfigure_generate_messages_nodejs: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
 
-.PHONY : run_tests_ar_track_alvar
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
 
 # fast build rule for target.
-run_tests_ar_track_alvar/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar.dir/build
-.PHONY : run_tests_ar_track_alvar/fast
+dynamic_reconfigure_generate_messages_nodejs/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+visualization_msgs_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : visualization_msgs_generate_messages_py
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
+visualization_msgs_generate_messages_py/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-tf_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule
+tf2_msgs_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : tf_generate_messages_py
+.PHONY : tf2_msgs_generate_messages_cpp
 
 # fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
+tf2_msgs_generate_messages_cpp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
+.PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+individualMarkersNoKinect: ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_cpp
+.PHONY : individualMarkersNoKinect
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+individualMarkersNoKinect/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkersNoKinect.dir/build
+.PHONY : individualMarkersNoKinect/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch: ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/rule
+roscpp_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
 
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+.PHONY : roscpp_generate_messages_cpp
 
 # fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast
+roscpp_generate_messages_cpp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-topic_tools_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+actionlib_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
-.PHONY : topic_tools_generate_messages_cpp
+.PHONY : actionlib_generate_messages_cpp
 
 # fast build rule for target.
-topic_tools_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
-.PHONY : topic_tools_generate_messages_cpp/fast
+actionlib_generate_messages_cpp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+.PHONY : actionlib_generate_messages_cpp/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/rule:
@@ -993,19 +978,49 @@ tf_generate_messages_nodejs/fast:
 .PHONY : tf_generate_messages_nodejs/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch: ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_lisp
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+pcl_msgs_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : pcl_msgs_generate_messages_cpp
+
+# fast build rule for target.
+pcl_msgs_generate_messages_cpp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
+.PHONY : pcl_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule
+
+# Convenience name for target.
+individualMarkers: ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule
+
+.PHONY : individualMarkers
+
+# fast build rule for target.
+individualMarkers/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/build
+.PHONY : individualMarkers/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/rule:
@@ -1051,6 +1066,36 @@ tf_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_
 tf_generate_messages_lisp/fast:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_lisp.dir/build
 .PHONY : tf_generate_messages_lisp/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_cpp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/rule
+
+.PHONY : tf_generate_messages_py
+
+# fast build rule for target.
+tf_generate_messages_py/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/tf_generate_messages_py.dir/build
+.PHONY : tf_generate_messages_py/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -1126,36 +1171,6 @@ rosgraph_msgs_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/ros
 rosgraph_msgs_generate_messages_py/fast:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
 .PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# fast build rule for target.
-sensor_msgs_generate_messages_eus/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-.PHONY : sensor_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# fast build rule for target.
-sensor_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-.PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/ar_track_alvar_4markers_tork.bag.dir/rule:
@@ -1248,184 +1263,19 @@ bond_generate_messages_cpp/fast:
 .PHONY : bond_generate_messages_cpp/fast
 
 # Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+rosgraph_msgs_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_eus
+.PHONY : rosgraph_msgs_generate_messages_lisp
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule
-
-# Convenience name for target.
-findMarkerBundlesNoKinect: ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule
-
-.PHONY : findMarkerBundlesNoKinect
-
-# fast build rule for target.
-findMarkerBundlesNoKinect/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/build
-.PHONY : findMarkerBundlesNoKinect/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule
-
-# Convenience name for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch: ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/rule
-
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
-
-# fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule
-
-# Convenience name for target.
-individualMarkers: ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/rule
-
-.PHONY : individualMarkers
-
-# fast build rule for target.
-individualMarkers/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/individualMarkers.dir/build
-.PHONY : individualMarkers/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-pcl_msgs_generate_messages_cpp: ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : pcl_msgs_generate_messages_cpp
-
-# fast build rule for target.
-pcl_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_cpp.dir/build
-.PHONY : pcl_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_py
-
-# fast build rule for target.
-visualization_msgs_generate_messages_py/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/visualization_msgs_generate_messages_py.dir/build
-.PHONY : visualization_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_eus: ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-
-.PHONY : std_srvs_generate_messages_eus
-
-# fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule
-
-# Convenience name for target.
-kinect_filtering: ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule
-
-.PHONY : kinect_filtering
-
-# fast build rule for target.
-kinect_filtering/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/build
-.PHONY : kinect_filtering/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
+rosgraph_msgs_generate_messages_lisp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+.PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/rule:
@@ -1531,21 +1381,6 @@ pcl_msgs_generate_messages_nodejs: ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_
 pcl_msgs_generate_messages_nodejs/fast:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_nodejs.dir/build
 .PHONY : pcl_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# fast build rule for target.
-sensor_msgs_generate_messages_py/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-.PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/nodelet_generate_messages_py.dir/rule:
@@ -1698,6 +1533,21 @@ std_srvs_generate_messages_lisp/fast:
 .PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule
+
+# Convenience name for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch: ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/rule
+
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast
+
+# Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
@@ -1818,6 +1668,81 @@ pcl_msgs_generate_messages_py/fast:
 .PHONY : pcl_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# fast build rule for target.
+dynamic_reconfigure_generate_messages_lisp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule
+
+# Convenience name for target.
+findMarkerBundlesNoKinect: ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/rule
+
+.PHONY : findMarkerBundlesNoKinect
+
+# fast build rule for target.
+findMarkerBundlesNoKinect/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/findMarkerBundlesNoKinect.dir/build
+.PHONY : findMarkerBundlesNoKinect/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule
+
+# Convenience name for target.
+kinect_filtering: ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/rule
+
+.PHONY : kinect_filtering
+
+# fast build rule for target.
+kinect_filtering/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/kinect_filtering.dir/build
+.PHONY : kinect_filtering/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# fast build rule for target.
+roscpp_generate_messages_lisp/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+.PHONY : roscpp_generate_messages_lisp/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_eus: ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+.PHONY : std_srvs_generate_messages_eus
+
+# fast build rule for target.
+std_srvs_generate_messages_eus/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
+
+# Convenience name for target.
 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/rule:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/rule
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/rule
@@ -1921,6 +1846,36 @@ ar_track_alvar: ar_track_alvar/ar_track_alvar/CMakeFiles/ar_track_alvar.dir/rule
 ar_track_alvar/fast:
 	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/ar_track_alvar.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/ar_track_alvar.dir/build
 .PHONY : ar_track_alvar/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule
+
+# Convenience name for target.
+trainMarkerBundle: ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/rule
+
+.PHONY : trainMarkerBundle
+
+# fast build rule for target.
+trainMarkerBundle/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/trainMarkerBundle.dir/build
+.PHONY : trainMarkerBundle/fast
+
+# Convenience name for target.
+ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule
+.PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule
+
+# Convenience name for target.
+createMarker: ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/rule
+
+.PHONY : createMarker
+
+# fast build rule for target.
+createMarker/fast:
+	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/createMarker.dir/build
+.PHONY : createMarker/fast
 
 nodes/FindMarkerBundles.o: nodes/FindMarkerBundles.cpp.o
 
@@ -2951,21 +2906,24 @@ help:
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch"
-	@echo "... clean_test_results_ar_track_alvar"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch"
 	@echo "... install/local"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch"
+	@echo "... clean_test_results_ar_track_alvar"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check"
 	@echo "... _run_tests_ar_track_alvar"
-	@echo "... createMarker"
-	@echo "... trainMarkerBundle"
+	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_eus"
+	@echo "... run_tests_ar_track_alvar"
+	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch"
+	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... pcl_ros_gencfg"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... actionlib_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... individualMarkersNoKinect"
-	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... actionlib_msgs_generate_messages_lisp"
 	@echo "... findMarkerBundles"
@@ -2974,52 +2932,39 @@ help:
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... bond_generate_messages_py"
 	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... rebuild_cache"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... sensor_msgs_generate_messages_lisp"
 	@echo "... _run_tests_ar_track_alvar_rostest"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... run_tests_ar_track_alvar"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... tf_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch"
-	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... dynamic_reconfigure_generate_messages_nodejs"
+	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... individualMarkersNoKinect"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... rebuild_cache"
+	@echo "... actionlib_generate_messages_cpp"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf_generate_messages_nodejs"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch"
+	@echo "... pcl_msgs_generate_messages_cpp"
+	@echo "... individualMarkers"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test"
 	@echo "... bond_generate_messages_eus"
 	@echo "... tf_generate_messages_lisp"
+	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... tf_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... run_tests_ar_track_alvar_rostest_test_marker_param_config-full.test"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... sensor_msgs_generate_messages_eus"
-	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... ar_track_alvar_4markers_tork.bag"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_eus"
 	@echo "... bond_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... findMarkerBundlesNoKinect"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch"
-	@echo "... individualMarkers"
-	@echo "... pcl_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... visualization_msgs_generate_messages_py"
-	@echo "... std_srvs_generate_messages_eus"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... kinect_filtering"
-	@echo "... dynamic_reconfigure_generate_messages_py"
+	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_gencfg"
@@ -3027,7 +2972,6 @@ help:
 	@echo "... _run_tests_ar_track_alvar_rostest_test_marker_arg_config-full.test"
 	@echo "... nodelet_generate_messages_nodejs"
 	@echo "... pcl_msgs_generate_messages_nodejs"
-	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... nodelet_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... visualization_msgs_generate_messages_lisp"
@@ -3039,6 +2983,7 @@ help:
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_nodejs"
@@ -3047,6 +2992,11 @@ help:
 	@echo "... topic_tools_generate_messages_eus"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... pcl_msgs_generate_messages_py"
+	@echo "... dynamic_reconfigure_generate_messages_lisp"
+	@echo "... findMarkerBundlesNoKinect"
+	@echo "... kinect_filtering"
+	@echo "... roscpp_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_eus"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
@@ -3054,6 +3004,8 @@ help:
 	@echo "... visualization_msgs_generate_messages_eus"
 	@echo "... ar_track_alvar_gencfg"
 	@echo "... ar_track_alvar"
+	@echo "... trainMarkerBundle"
+	@echo "... createMarker"
 	@echo "... nodes/FindMarkerBundles.o"
 	@echo "... nodes/FindMarkerBundles.i"
 	@echo "... nodes/FindMarkerBundles.s"

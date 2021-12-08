@@ -132,6 +132,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/gtest/cmake_install.cmake")
   include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/cmake_install.cmake")
+  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/lab4_cam/cmake_install.cmake")
   include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar/cmake_install.cmake")
   include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/cmake_install.cmake")
 

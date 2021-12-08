@@ -27,6 +27,8 @@ import imutils
 import matplotlib.pyplot as plt
 from geometry_msgs.msg import Point, PointStamped
 
+from ar_track_alvar_msgs.msg import AlvarMarkers
+
 from sensor_msgs.msg import Image, CameraInfo, PointCloud2
 
 import numpy as np
@@ -56,6 +58,10 @@ def convert_depth_to_phys_coord_using_realsense(x, y, depth, cameraInfo):
     _intrinsics.coeffs = [i for i in cameraInfo.D]
     result = rs2.rs2_deproject_pixel_to_point(_intrinsics, [x, y], depth)
     #result[0]: right, result[1]: down, result[2]: forward
+
+    #### TODO: Figure out which one it is? This one makes more sense for rviz
+    #return result[0], -result[1], result[2]
+    # Original:
     return result[2], -result[0], -result[1]
 
 def isolate_object_of_interest_old(points, image, cam_matrix, trans, rot):
@@ -96,6 +102,7 @@ class PointcloudProcess:
                        image_sub_topic,
                        depth_sub_topic,
                        cam_info_topic,
+                       ar_tag_pose_topic,
                        points_pub_topic):
 
         self.num_steps = 0
@@ -106,6 +113,7 @@ class PointcloudProcess:
         image_sub = message_filters.Subscriber(image_sub_topic, Image)
         depth_sub = message_filters.Subscriber(depth_sub_topic, Image)
         caminfo_sub = message_filters.Subscriber(cam_info_topic, CameraInfo)
+        ar_tag_pose_sub = message_filters.Subscriber(ar_tag_pose_topic, AlvarMarkers)
 
         #A1 Soccer
         self.cv_bridge = CvBridge()
@@ -118,8 +126,8 @@ class PointcloudProcess:
         self.points_pub = rospy.Publisher(points_pub_topic, PointStamped, queue_size=10)
         self.image_pub = rospy.Publisher('segmented_image', Image, queue_size=10)
         
-        ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, caminfo_sub],
-                                                          10, 0.1, allow_headerless=True)
+        ts = message_filters.ApproximateTimeSynchronizer([points_sub, image_sub, depth_sub, ar_tag_pose_sub, caminfo_sub],
+                                                          10, 1, allow_headerless=True)
 
         ts.registerCallback(self.callback)
 
@@ -185,11 +193,14 @@ class PointcloudProcess:
                 print("Center:", center)
                 x, y = center
 
-                show_image_with_point(image, center)
+                #show_image_with_point(image, center)
 
                 depth_val = None
                 try:
-                    depth_val = depth[x,y]
+                    depth_val = depth[y,x]
+                    print("Depth_val:", depth_val)
+                    # The 3D coordinates (float[3]). The coordinate system is also defined here. 
+                    # If you want to use these values in rviz, you need to change the coordinate.
                     center_soccer_point_3d = convert_depth_to_phys_coord_using_realsense(x, y, depth_val, camera_info)
                     print(center_soccer_point_3d)
                     return center_soccer_point_3d, cv2.contourArea(contour), center
@@ -206,7 +217,7 @@ class PointcloudProcess:
             # points = segment_pointcloud(points, segmented_image, cam_matrix, trans, rot)
             # return points
     
-    def callback(self, points_msg, image, depth, info): 
+    def callback(self, points_msg, image, depth, info): #ar_tag 
         try:
             intrinsic_matrix = get_camera_matrix(info)
             intrinsic_matrix = info
@@ -263,11 +274,12 @@ def main():
     DEPTH_IMAGE_TOPIC = '/camera/aligned_depth_to_color/image_raw' #'/camera/depth/image_rect_raw'
     #DEPTH_IMAGE_TOPIC = '/camera/depth/image_rect_raw'
     POINTS_TOPIC = '/camera/depth/color/points'
+    AR_TAG_POSE_TOPIC = '/ar_pose_marker'
     POINTS_PUB_TOPIC = 'segmented_points'
 
     rospy.init_node('realsense_listener')
     process = PointcloudProcess(POINTS_TOPIC, RGB_IMAGE_TOPIC, DEPTH_IMAGE_TOPIC,
-                                CAM_INFO_TOPIC, POINTS_PUB_TOPIC)
+                                CAM_INFO_TOPIC, AR_TAG_POSE_TOPIC, POINTS_PUB_TOPIC)
     r = rospy.Rate(1000)
 
     while not rospy.is_shutdown():

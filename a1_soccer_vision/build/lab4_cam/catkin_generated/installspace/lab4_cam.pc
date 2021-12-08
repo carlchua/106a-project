@@ -1,0 +1,8 @@
+prefix=/mnt/c/final_project/106a-project/a1_soccer_vision/install
+
+Name: lab4_cam
+Description: Description of lab4_cam
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
