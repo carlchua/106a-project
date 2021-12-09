@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/mnt/c/final_project/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar/include/ar_track_alvar/filter/kinect_filtering.h
+/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar/include/ar_track_alvar/filter/kinect_filtering.h
 pcl_conversions/pcl_conversions.h
 -
 pcl/point_types.h
@@ -42,7 +42,7 @@ opencv2/core/core.hpp
 tf/LinearMath/Matrix3x3.h
 -
 
-/mnt/c/final_project/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar/src/kinect_filtering.cpp
+/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar/src/kinect_filtering.cpp
 Eigen/Core
 -
 ar_track_alvar/filter/kinect_filtering.h

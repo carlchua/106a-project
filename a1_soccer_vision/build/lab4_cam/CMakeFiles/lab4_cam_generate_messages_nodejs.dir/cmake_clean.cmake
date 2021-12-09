@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab4_cam_generate_messages_nodejs"
-  "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/share/gennodejs/ros/lab4_cam/srv/ImageSrv.js"
+  "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/share/gennodejs/ros/lab4_cam/srv/ImageSrv.js"
 )
 
 # Per-language clean rules from dependency scanning.

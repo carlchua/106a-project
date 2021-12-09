@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/src
+CMAKE_SOURCE_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
+CMAKE_BINARY_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build
 
 # Utility rule file for bond_generate_messages_eus.
 
@@ -63,10 +63,10 @@ ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/build: b
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/build
 
 ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/clean:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_eus.dir/cmake_clean.cmake
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar && $(CMAKE_COMMAND) -P CMakeFiles/bond_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/clean
 
 ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/depend:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/final_project/106a-project/a1_soccer_vision/src /mnt/c/final_project/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar /mnt/c/final_project/106a-project/a1_soccer_vision/build /mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar /mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : ar_track_alvar/ar_track_alvar/CMakeFiles/bond_generate_messages_eus.dir/depend
 

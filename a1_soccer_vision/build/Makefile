@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/src
+CMAKE_SOURCE_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
+CMAKE_BINARY_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/final_project/106a-project/a1_soccer_vision/build/CMakeFiles /mnt/c/final_project/106a-project/a1_soccer_vision/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/CMakeFiles /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/final_project/106a-project/a1_soccer_vision/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -844,97 +844,6 @@ _run_tests_ar_track_alvar_rostest_test_marker_param_config-basic.test/fast:
 .PHONY : _run_tests_ar_track_alvar_rostest_test_marker_param_config-basic.test/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
-
-# Build rule for target.
-_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
-.PHONY : _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
-
-# fast build rule for target.
-_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build
-.PHONY : _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
-
-# Build rule for target.
-run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
-.PHONY : run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
-
-# fast build rule for target.
-run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build
-.PHONY : run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_rostest
-
-# Build rule for target.
-run_tests_ar_track_alvar_rostest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_rostest
-.PHONY : run_tests_ar_track_alvar_rostest
-
-# fast build rule for target.
-run_tests_ar_track_alvar_rostest/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest.dir/build
-.PHONY : run_tests_ar_track_alvar_rostest/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
-
-# Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
-
-# fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
-
-# Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
-
-# fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
-
-# Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
-
-# fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
-
-# Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
-
-# fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast
-
-#=============================================================================
 # Target rules for targets named run_tests_ar_track_alvar_rostest_test_marker_param_config-basic.test
 
 # Build rule for target.
@@ -961,108 +870,212 @@ run_tests_ar_track_alvar_rostest_test_marker_arg_config-full.test/fast:
 .PHONY : run_tests_ar_track_alvar_rostest_test_marker_arg_config-full.test/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+# Target rules for targets named _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
 
 # Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
+.PHONY : _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
 
 # fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast
+_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build
+.PHONY : _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast
 
 #=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+# Target rules for targets named run_tests_ar_track_alvar_rostest
 
 # Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+run_tests_ar_track_alvar_rostest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_rostest
+.PHONY : run_tests_ar_track_alvar_rostest
 
 # fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast
+run_tests_ar_track_alvar_rostest/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest.dir/build
+.PHONY : run_tests_ar_track_alvar_rostest/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
 
 # Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
 
 # fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast
 
 #=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
 
 # Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test
 
 # fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
 
 # Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
 
 # fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast
 
 #=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
 
 # Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
 
 # fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+# Target rules for targets named run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
 
 # Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
+.PHONY : run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test
 
 # fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast
+run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test.dir/build
+.PHONY : run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test/fast
 
 #=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
 
 # Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
 
 # fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+
+# Build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+
+# Build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+
+# Build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+
+# Build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+
+# Build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+
+# Build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+
+# Build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast
+
+#=============================================================================
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+
+# Build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast
 
 #=============================================================================
 # Target rules for targets named clean_test_results_ar_track_alvar
@@ -1076,19 +1089,6 @@ clean_test_results_ar_track_alvar: cmake_check_build_system
 clean_test_results_ar_track_alvar/fast:
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/clean_test_results_ar_track_alvar.dir/build
 .PHONY : clean_test_results_ar_track_alvar/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
-
-# Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
-
-# fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast
 
 #=============================================================================
 # Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check
@@ -1180,19 +1180,6 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 rosgraph_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
-
-# Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
-
-# fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast
 
 #=============================================================================
 # Target rules for targets named topic_tools_generate_messages_cpp
@@ -1455,6 +1442,19 @@ individualMarkersNoKinect/fast:
 .PHONY : individualMarkersNoKinect/fast
 
 #=============================================================================
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+
+# Build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_cpp
 
 # Build rule for target.
@@ -1468,6 +1468,32 @@ roscpp_generate_messages_cpp/fast:
 .PHONY : roscpp_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
+
+# Build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+
+# Build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast
+
+#=============================================================================
 # Target rules for targets named actionlib_generate_messages_cpp
 
 # Build rule for target.
@@ -1479,19 +1505,6 @@ actionlib_generate_messages_cpp: cmake_check_build_system
 actionlib_generate_messages_cpp/fast:
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
-
-#=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
-
-# Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch
-
-# fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_nodejs
@@ -1520,19 +1533,6 @@ tf_generate_messages_nodejs/fast:
 .PHONY : tf_generate_messages_nodejs/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
-
-# Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch
-
-# fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch/fast
-
-#=============================================================================
 # Target rules for targets named pcl_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1559,17 +1559,17 @@ individualMarkers/fast:
 .PHONY : individualMarkers/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
 
 # Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
 
 # fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test/fast
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast
 
 #=============================================================================
 # Target rules for targets named bond_generate_messages_eus
@@ -1754,6 +1754,19 @@ tf_generate_messages_eus/fast:
 .PHONY : tf_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+
+# Build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch
+
+# fast build rule for target.
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch/fast
+
+#=============================================================================
 # Target rules for targets named bond_generate_messages_cpp
 
 # Build rule for target.
@@ -1778,19 +1791,6 @@ rosgraph_msgs_generate_messages_lisp: cmake_check_build_system
 rosgraph_msgs_generate_messages_lisp/fast:
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
-
-#=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
-
-# Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test
-
-# fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test/fast
 
 #=============================================================================
 # Target rules for targets named tf2_msgs_generate_messages_lisp
@@ -2001,19 +2001,6 @@ std_srvs_generate_messages_lisp/fast:
 .PHONY : std_srvs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
-
-# Build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch
-
-# fast build rule for target.
-_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch.dir/build
-.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch/fast
-
-#=============================================================================
 # Target rules for targets named topic_tools_generate_messages_lisp
 
 # Build rule for target.
@@ -2038,6 +2025,19 @@ pcl_msgs_generate_messages_eus: cmake_check_build_system
 pcl_msgs_generate_messages_eus/fast:
 	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/pcl_msgs_generate_messages_eus.dir/build
 .PHONY : pcl_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+
+# Build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+
+# fast build rule for target.
+_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/_run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build
+.PHONY : _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast
 
 #=============================================================================
 # Target rules for targets named actionlib_generate_messages_nodejs
@@ -2183,17 +2183,17 @@ std_srvs_generate_messages_eus/fast:
 .PHONY : std_srvs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+# Target rules for targets named run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
 
 # Build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch
 
 # fast build rule for target.
-run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast:
-	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test.dir/build
-.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test/fast
+run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast:
+	$(MAKE) -f ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build.make ar_track_alvar/ar_track_alvar/CMakeFiles/run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch.dir/build
+.PHONY : run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch/fast
 
 #=============================================================================
 # Target rules for targets named std_srvs_generate_messages_py
@@ -2364,25 +2364,25 @@ help:
 	@echo "... lab4_cam_generate_messages_py"
 	@echo "... _run_tests_ar_track_alvar_rostest_test_marker_param_config-full.test"
 	@echo "... _run_tests_ar_track_alvar_rostest_test_marker_param_config-basic.test"
-	@echo "... _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test"
-	@echo "... run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test"
-	@echo "... run_tests_ar_track_alvar_rostest"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test"
 	@echo "... run_tests_ar_track_alvar_rostest_test_marker_param_config-basic.test"
 	@echo "... run_tests_ar_track_alvar_rostest_test_marker_arg_config-full.test"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch"
+	@echo "... _run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test"
+	@echo "... run_tests_ar_track_alvar_rostest"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-basic.test"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test"
+	@echo "... run_tests_ar_track_alvar_rostest_test_marker_arg_config-basic.test"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv_no_kinect.launch"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch"
 	@echo "... clean_test_results_ar_track_alvar"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch"
 	@echo "... _run_tests_ar_track_alvar_roslaunch-check"
 	@echo "... run_tests_ar_track_alvar_roslaunch-check"
 	@echo "... _run_tests_ar_track_alvar"
@@ -2390,7 +2390,6 @@ help:
 	@echo "... dynamic_reconfigure_generate_messages_eus"
 	@echo "... run_tests_ar_track_alvar"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch"
 	@echo "... topic_tools_generate_messages_cpp"
 	@echo "... pcl_ros_gencfg"
 	@echo "... topic_tools_generate_messages_nodejs"
@@ -2411,15 +2410,16 @@ help:
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
 	@echo "... individualMarkersNoKinect"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch"
 	@echo "... roscpp_generate_messages_cpp"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch"
 	@echo "... actionlib_generate_messages_cpp"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle_no_kinect.launch"
 	@echo "... tf2_msgs_generate_messages_nodejs"
 	@echo "... tf_generate_messages_nodejs"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_train.launch"
 	@echo "... pcl_msgs_generate_messages_cpp"
 	@echo "... individualMarkers"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-full.test"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test"
 	@echo "... bond_generate_messages_eus"
 	@echo "... tf_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_generate_messages_cpp"
@@ -2434,9 +2434,9 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_cpp"
 	@echo "... tf_generate_messages_eus"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_indiv.launch"
 	@echo "... bond_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_param_config-full.test"
 	@echo "... tf2_msgs_generate_messages_lisp"
 	@echo "... dynamic_reconfigure_gencfg"
 	@echo "... nodelet_generate_messages_eus"
@@ -2453,9 +2453,9 @@ help:
 	@echo "... topic_tools_generate_messages_py"
 	@echo "... nodelet_topic_tools_gencfg"
 	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_ar_track.launch"
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... pcl_msgs_generate_messages_eus"
+	@echo "... _run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... pcl_msgs_generate_messages_lisp"
@@ -2467,7 +2467,7 @@ help:
 	@echo "... kinect_filtering"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... std_srvs_generate_messages_eus"
-	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_final_project_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_test_marker_arg_config-basic.test"
+	@echo "... run_tests_ar_track_alvar_roslaunch-check__mnt_c_bioe106a_bioe106a_final_project_test_106a-project_a1_soccer_vision_src_ar_track_alvar_ar_track_alvar_launch_pr2_bundle.launch"
 	@echo "... std_srvs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... visualization_msgs_generate_messages_cpp"

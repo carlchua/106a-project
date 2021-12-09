@@ -122,7 +122,7 @@ class PointcloudProcess:
         self.max_center_point_3d = (0,0,0)
         self.max_center_point_2d = (0,0)
         self.max_contour_area = 0
-        self.ball_radius = 9 # In cm
+        self.ball_radius = 0.09 # In m
 
         self.points_pub = rospy.Publisher(points_pub_topic, PointStamped, queue_size=10)
         self.image_pub = rospy.Publisher('segmented_image', Image, queue_size=10)
@@ -146,7 +146,7 @@ class PointcloudProcess:
             else:
                 ball_marker = msg.markers[1]
                 goal_marker = msg.markers[0]
-            
+
             ball_position = ball_marker.pose.pose.position
             goal_position = goal_marker.pose.pose.position
 
@@ -164,9 +164,10 @@ class PointcloudProcess:
                 tf_base_to_camera[1] + p_relative_to_camera[1],
                 tf_base_to_camera[2] + p_relative_to_camera[2])
 
-            print('kicking point:', p_relative_to_camera)
-            #p_relative_to_camera = (0.21811920495134257, 0.13110996873876438, -0.011103773408655244)
+            print('kicking point relative to camera:', p_relative_to_camera)
+            print('kicking point relative to base:', p_relative_to_base)
             pointmsg = point_to_pointstamped_msg(p_relative_to_camera)
+            #pointmsg = point_to_pointstamped_msg(p_relative_to_base)
             self.points_pub.publish(pointmsg)
             #return p_relative_to_camera
 

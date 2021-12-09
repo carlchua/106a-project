@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/findMarkerBundlesNoKinect.dir/nodes/FindMarkerBundlesNoKinect.cpp.o"
-  "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/lib/ar_track_alvar/findMarkerBundlesNoKinect.pdb"
-  "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/lib/ar_track_alvar/findMarkerBundlesNoKinect"
+  "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/lib/ar_track_alvar/findMarkerBundlesNoKinect.pdb"
+  "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/lib/ar_track_alvar/findMarkerBundlesNoKinect"
 )
 
 # Per-language clean rules from dependency scanning.

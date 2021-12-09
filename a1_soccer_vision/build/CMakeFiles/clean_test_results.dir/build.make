@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/src
+CMAKE_SOURCE_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
+CMAKE_BINARY_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /mnt/c/final_project/106a-project/a1_soccer_vision/build/test_results
+	/usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/final_project/106a-project/a1_soccer_vision/src /mnt/c/final_project/106a-project/a1_soccer_vision/src /mnt/c/final_project/106a-project/a1_soccer_vision/build /mnt/c/final_project/106a-project/a1_soccer_vision/build /mnt/c/final_project/106a-project/a1_soccer_vision/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

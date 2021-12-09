@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/final_project/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs
+# Install script for directory: /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/final_project/106a-project/a1_soccer_vision/install")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs/msg" TYPE FILE FILES
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs/msg/AlvarMarker.msg"
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs/msg/AlvarMarkers.msg"
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs/msg/AlvarMarker.msg"
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs/msg/AlvarMarkers.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs/cmake" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs/cmake" TYPE FILE FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/include/ar_track_alvar_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/include/ar_track_alvar_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/share/roseus/ros/ar_track_alvar_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/share/roseus/ros/ar_track_alvar_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/share/common-lisp/ros/ar_track_alvar_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/share/common-lisp/ros/ar_track_alvar_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/share/gennodejs/ros/ar_track_alvar_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/share/gennodejs/ros/ar_track_alvar_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/lib/python2.7/dist-packages/ar_track_alvar_msgs")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/lib/python2.7/dist-packages/ar_track_alvar_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/devel/lib/python2.7/dist-packages/ar_track_alvar_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/devel/lib/python2.7/dist-packages/ar_track_alvar_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs/cmake" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs/cmake" TYPE FILE FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs/cmake" TYPE FILE FILES
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgsConfig.cmake"
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgsConfig-version.cmake"
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgsConfig.cmake"
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/catkin_generated/installspace/ar_track_alvar_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ar_track_alvar_msgs" TYPE FILE FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/ar_track_alvar/ar_track_alvar_msgs/package.xml")
 endif()
 

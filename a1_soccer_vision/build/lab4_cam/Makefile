@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/src
+CMAKE_SOURCE_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
+CMAKE_BINARY_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ install/local/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/final_project/106a-project/a1_soccer_vision/build/CMakeFiles /mnt/c/final_project/106a-project/a1_soccer_vision/build/lab4_cam/CMakeFiles/progress.marks
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/final_project/106a-project/a1_soccer_vision/build/CMakeFiles 0
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/CMakeFiles /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/lab4_cam/CMakeFiles/progress.marks
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/clean
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/preinstall
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/preinstall
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_genpy.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_genpy.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_genpy.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_genpy.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ lab4_cam_genpy: lab4_cam/CMakeFiles/lab4_cam_genpy.dir/rule
 
 # fast build rule for target.
 lab4_cam_genpy/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_genpy.dir/build.make lab4_cam/CMakeFiles/lab4_cam_genpy.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_genpy.dir/build.make lab4_cam/CMakeFiles/lab4_cam_genpy.dir/build
 .PHONY : lab4_cam_genpy/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ sensor_msgs_generate_messages_py: lab4_cam/CMakeFiles/sensor_msgs_generate_messa
 
 # fast build rule for target.
 sensor_msgs_generate_messages_py/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ lab4_cam_genlisp: lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/rule
 
 # fast build rule for target.
 lab4_cam_genlisp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_genlisp.dir/build
 .PHONY : lab4_cam_genlisp/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ sensor_msgs_generate_messages_nodejs: lab4_cam/CMakeFiles/sensor_msgs_generate_m
 
 # fast build rule for target.
 sensor_msgs_generate_messages_nodejs/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
 .PHONY : sensor_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ lab4_cam_generate_messages: lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/r
 
 # fast build rule for target.
 lab4_cam_generate_messages/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages.dir/build
 .PHONY : lab4_cam_generate_messages/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ sensor_msgs_generate_messages_lisp: lab4_cam/CMakeFiles/sensor_msgs_generate_mes
 
 # fast build rule for target.
 sensor_msgs_generate_messages_lisp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 .PHONY : sensor_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ lab4_cam_generate_messages_eus: lab4_cam/CMakeFiles/lab4_cam_generate_messages_e
 
 # fast build rule for target.
 lab4_cam_generate_messages_eus/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_eus.dir/build
 .PHONY : lab4_cam_generate_messages_eus/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ lab4_cam_gennodejs: lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/rule
 
 # fast build rule for target.
 lab4_cam_gennodejs/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/build.make lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/build.make lab4_cam/CMakeFiles/lab4_cam_gennodejs.dir/build
 .PHONY : lab4_cam_gennodejs/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ sensor_msgs_generate_messages_cpp: lab4_cam/CMakeFiles/sensor_msgs_generate_mess
 
 # fast build rule for target.
 sensor_msgs_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ sensor_msgs_generate_messages_eus: lab4_cam/CMakeFiles/sensor_msgs_generate_mess
 
 # fast build rule for target.
 sensor_msgs_generate_messages_eus/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make lab4_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
 .PHONY : sensor_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ lab4_cam_generate_messages_cpp: lab4_cam/CMakeFiles/lab4_cam_generate_messages_c
 
 # fast build rule for target.
 lab4_cam_generate_messages_cpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_cpp.dir/build
 .PHONY : lab4_cam_generate_messages_cpp/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ lab4_cam_gencpp: lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/rule
 
 # fast build rule for target.
 lab4_cam_gencpp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_gencpp.dir/build
 .PHONY : lab4_cam_gencpp/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_geneus.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_geneus.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_geneus.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_geneus.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ lab4_cam_geneus: lab4_cam/CMakeFiles/lab4_cam_geneus.dir/rule
 
 # fast build rule for target.
 lab4_cam_geneus/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_geneus.dir/build.make lab4_cam/CMakeFiles/lab4_cam_geneus.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_geneus.dir/build.make lab4_cam/CMakeFiles/lab4_cam_geneus.dir/build
 .PHONY : lab4_cam_geneus/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ lab4_cam_generate_messages_lisp: lab4_cam/CMakeFiles/lab4_cam_generate_messages_
 
 # fast build rule for target.
 lab4_cam_generate_messages_lisp/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_lisp.dir/build
 .PHONY : lab4_cam_generate_messages_lisp/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ lab4_cam_generate_messages_nodejs: lab4_cam/CMakeFiles/lab4_cam_generate_message
 
 # fast build rule for target.
 lab4_cam_generate_messages_nodejs/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_nodejs.dir/build
 .PHONY : lab4_cam_generate_messages_nodejs/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule
 .PHONY : lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ _lab4_cam_generate_messages_check_deps_ImageSrv: lab4_cam/CMakeFiles/_lab4_cam_g
 
 # fast build rule for target.
 _lab4_cam_generate_messages_check_deps_ImageSrv/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/build.make lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/build.make lab4_cam/CMakeFiles/_lab4_cam_generate_messages_check_deps_ImageSrv.dir/build
 .PHONY : _lab4_cam_generate_messages_check_deps_ImageSrv/fast
 
 # Convenience name for target.
 lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/rule:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/rule
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f CMakeFiles/Makefile2 lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/rule
 .PHONY : lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -419,7 +419,7 @@ lab4_cam_generate_messages_py: lab4_cam/CMakeFiles/lab4_cam_generate_messages_py
 
 # fast build rule for target.
 lab4_cam_generate_messages_py/fast:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/build
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(MAKE) -f lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/build.make lab4_cam/CMakeFiles/lab4_cam_generate_messages_py.dir/build
 .PHONY : lab4_cam_generate_messages_py/fast
 
 # Help Target
@@ -463,6 +463,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

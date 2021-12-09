@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/final_project/106a-project/a1_soccer_vision/src
+# Install script for directory: /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/final_project/106a-project/a1_soccer_vision/install")
+  set(CMAKE_INSTALL_PREFIX "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,92 +49,92 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/_setup_util.py")
+   "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE PROGRAM FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install" TYPE PROGRAM FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/env.sh")
+   "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE PROGRAM FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install" TYPE PROGRAM FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/setup.bash;/mnt/c/final_project/106a-project/a1_soccer_vision/install/local_setup.bash")
+   "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/setup.bash;/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.bash"
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install" TYPE FILE FILES
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.bash"
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/setup.sh;/mnt/c/final_project/106a-project/a1_soccer_vision/install/local_setup.sh")
+   "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/setup.sh;/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.sh"
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install" TYPE FILE FILES
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.sh"
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/setup.zsh;/mnt/c/final_project/106a-project/a1_soccer_vision/install/local_setup.zsh")
+   "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/setup.zsh;/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.zsh"
-    "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install" TYPE FILE FILES
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/setup.zsh"
+    "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/mnt/c/final_project/106a-project/a1_soccer_vision/install/.rosinstall")
+   "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/mnt/c/final_project/106a-project/a1_soccer_vision/install" TYPE FILE FILES "/mnt/c/final_project/106a-project/a1_soccer_vision/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/install" TYPE FILE FILES "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/gtest/cmake_install.cmake")
-  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/cmake_install.cmake")
-  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/lab4_cam/cmake_install.cmake")
-  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar/cmake_install.cmake")
-  include("/mnt/c/final_project/106a-project/a1_soccer_vision/build/segmentation/cmake_install.cmake")
+  include("/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/gtest/cmake_install.cmake")
+  include("/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar_msgs/cmake_install.cmake")
+  include("/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/lab4_cam/cmake_install.cmake")
+  include("/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/ar_track_alvar/ar_track_alvar/cmake_install.cmake")
+  include("/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/segmentation/cmake_install.cmake")
 
 endif()
 
@@ -146,5 +146,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/c/final_project/106a-project/a1_soccer_vision/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/src
+CMAKE_SOURCE_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/c/final_project/106a-project/a1_soccer_vision/build
+CMAKE_BINARY_DIR = /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build
 
 # Utility rule file for sensor_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build: sensor_msgs_ge
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
 
 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build/lab4_cam && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/lab4_cam && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 
 lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend:
-	cd /mnt/c/final_project/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/final_project/106a-project/a1_soccer_vision/src /mnt/c/final_project/106a-project/a1_soccer_vision/src/lab4_cam /mnt/c/final_project/106a-project/a1_soccer_vision/build /mnt/c/final_project/106a-project/a1_soccer_vision/build/lab4_cam /mnt/c/final_project/106a-project/a1_soccer_vision/build/lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/src/lab4_cam /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/lab4_cam /mnt/c/bioe106a/bioe106a_final_project/test/106a-project/a1_soccer_vision/build/lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : lab4_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
 
